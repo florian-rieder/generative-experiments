@@ -1,0 +1,16 @@
+
+body {
+    margin: 0;
+    display: flex;
+    /* Centers our sketch horizontally. */
+    justify-content: center;
+    /* Centers our sketch vertically. */
+    align-items: center;
+    /* Hide scrollbars */
+    overflow: hidden;
+}
+
+/* .p5Canvas {
+    margin-left: auto;
+    margin-right: auto;
+} */
