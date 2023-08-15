@@ -4,7 +4,7 @@ const maxRectSize = 10;
 const missChance = 15 / 100;
 
 function setup() {
-    let size = min(windowWidth, windowHeight);
+    const size = min(windowWidth, windowHeight);
     createCanvas(size, size);
 
     background(255);

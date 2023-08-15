@@ -18,15 +18,41 @@ body {
     height: 100vh;
 }
 
+.splash-container {
+    background: rgb(2,0,36);
+    background: linear-gradient(274deg, rgba(2,0,36,1) 0%, rgba(39,39,77,1) 35%, rgba(36,74,82,1) 100%);
+}
+
 iframe {
     padding: 0;
     margin: 0;
     border: none;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #hero h1 {
+    color: white;
     font-family: square;
     font-size: 6em;
+}
+
+.scroll-container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-section{
+  scroll-snap-align: center;
+  height: 100vh;
+  min-height: 36rem;
 }
