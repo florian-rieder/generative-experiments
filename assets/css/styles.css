@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: code_bold;
   src: url(../fonts/CODE\ Bold.otf);
@@ -23,14 +24,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  /* Square typgraphic unit using the N° and the numbers to form a square */
 }
 .slide-details .slide-title h2 {
   margin: 0;
 }
 .slide-details .slide-title legend {
   text-align: right;
-  width: 25px;
-  height: 25px;
   color: grey;
   font-size: 9pt;
   font-weight: 200;
@@ -38,13 +38,12 @@
   margin-top: 0.4em;
   font-kerning: none;
 }
-.slide-details .slide-title legend .legend-number-header {
+.slide-details .slide-title legend .legend-number-header, .slide-details .slide-title legend .legend-number {
   display: flex;
   justify-content: space-between;
 }
-.slide-details .slide-title legend .legend-number {
-  display: flex;
-  justify-content: space-between;
+.slide-details .slide-links a {
+  margin-right: 1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,8 +63,8 @@
     margin-top: 2px;
     font-size: 8pt;
   }
-  .slide-details .slide-title legend span {
-    margin-bottom: -1px;
+  .slide-details .slide-title legend .legend-number-header {
+    margin-bottom: -2px;
   }
 }
 #hero {
@@ -147,7 +146,7 @@
   width: 30px;
   height: 30px;
   border: 4px solid #b8b8b8;
-  border-top: 4px solid #ffffff;
+  border-top: 4px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite; /* Apply rotation animation */
   position: absolute;

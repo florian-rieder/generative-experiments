@@ -20,10 +20,9 @@
             margin: 0;
         }
 
+        /* Square typgraphic unit using the N° and the numbers to form a square */
         legend {
             text-align: right;
-            width: 25px;
-            height: 25px;
             color: grey;
             font-size: 9pt;
             font-weight: 200;
@@ -31,15 +30,16 @@
             margin-top: 0.4em;
             font-kerning: none;
 
-            .legend-number-header {
+            .legend-number-header, .legend-number {
                 display: flex;
                 justify-content: space-between;
             }
+        }
+    }
 
-            .legend-number {
-                display: flex;
-                justify-content: space-between;
-            }
+    .slide-links {
+        a {
+            margin-right: 1em;
         }
     }
 }
@@ -64,8 +64,8 @@
                 margin-top: 2px;
                 font-size: 8pt;
 
-                span {
-                    margin-bottom: -1px;
+                .legend-number-header {
+                    margin-bottom: -2px;
                 }
             }
         }
