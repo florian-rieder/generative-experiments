@@ -24,3 +24,9 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: $md) {
+    .scroll-section {
+        overflow-y: auto;
+    }
+}

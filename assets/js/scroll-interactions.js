@@ -17,17 +17,17 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
         const iframeWindow = iframe.contentWindow;
         const spinner = entry.target.querySelector(".spinner");
 
-        // Hide the spinner once the iframe has loaded.
-        iframe.addEventListener("load", () => {
-            spinner.style.display = 'none';
-        });
-
         if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
 
             // Lazy load iframes
             if (iframe.src === "") {
                 iframe.src = iframe.getAttribute("data-src");
+
+                // Hide the spinner once the iframe has loaded.
+                iframe.addEventListener("load", () => {
+                    spinner.style.display = 'none';
+                });
             }
 
             // Resume p5.js sketch functions
