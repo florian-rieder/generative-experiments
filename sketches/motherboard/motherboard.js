@@ -163,3 +163,7 @@ function countFilledCells(grid) {
     // Prompt: Could you help me with creating a function that goes through a 2D array of booleans and returns how many are true ?
     return grid.flat().reduce((sum, val) => sum + val, 0);
 }
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}

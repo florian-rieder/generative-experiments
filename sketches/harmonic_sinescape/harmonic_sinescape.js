@@ -10,6 +10,7 @@ const weights = generateWeights(3);
 const noiseCache = [];
 
 function setup() {
+    frameRate(1);
     createCanvas(windowWidth, windowHeight);
     background(0);
     stroke(255);
@@ -89,4 +90,8 @@ function generateWeights(numWeights) {
     }
 
     return weights;
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }

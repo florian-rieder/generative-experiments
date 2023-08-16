@@ -1,0 +1,76 @@
+/* Smooth scroll snap */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-section {
+    scroll-snap-align: center;
+    height: 100vh;
+    min-height: 36rem;
+    opacity: 0; /* Start with zero opacity */
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Artwork slides */
+.canvas-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-details {
+    box-sizing: border-box;
+    padding: 4em;
+}
+
+.slide-title {
+    margin-top: 2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    h2 {
+        margin: 0;
+    }
+
+    legend {
+        text-align: right;
+        width: 80px;
+        color: grey;
+        font-size: 10pt;
+        font-weight: 200;
+        letter-spacing: 2px;
+        margin-top: 0.4em; /* Adjust as needed */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .scroll-section {
+        overflow-y: auto;
+    }
+
+    .canvas-container {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .slide-details {
+        padding: 0 2em 1em 2em;
+        width: 100%;
+        font-size: 12pt;
+    }
+}
