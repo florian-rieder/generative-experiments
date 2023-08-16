@@ -16,6 +16,13 @@ function setup() {
     colorMode(HSL);
     noStroke();
 
+    initialize();
+    drawSquiggles();
+    //drawFrame();
+    //writeTitle();
+}
+
+function initialize() {
     // Generate color scheme based on a random hue
     baseHue = random(0, 360);
     background(color(baseHue, 15, 15));
@@ -31,9 +38,6 @@ function setup() {
     columns = 0;
     noiseOffset = 0;
 
-    drawSquiggles();
-    //drawFrame();
-    //writeTitle();
 }
 
 function drawSquiggles() {
@@ -87,5 +91,6 @@ function writeTitle() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+    initialize();
     drawSquiggles();
 }

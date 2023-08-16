@@ -15,6 +15,12 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
 
         let iframe = entry.target.querySelector("iframe[data-src]");
         const iframeWindow = iframe.contentWindow;
+        const spinner = entry.target.querySelector(".spinner");
+
+        // Hide the spinner once the iframe has loaded.
+        iframe.addEventListener("load", () => {
+            spinner.style.display = 'none';
+        });
 
         if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
