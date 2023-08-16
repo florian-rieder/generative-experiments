@@ -27,6 +27,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
                 // Hide the spinner once the iframe has loaded.
                 iframe.addEventListener("load", () => {
                     spinner.style.display = 'none';
+                    iframe.classList.add("fade-in");
                 });
             }
 

@@ -1,8 +1,8 @@
 @import "breakpoints";
 @import "fonts";
+@import "scrolling";
 @import "slides";
 @import "hero";
-@import "scrolling";
 @import "spinner";
 
 
@@ -32,4 +32,6 @@ iframe {
     width: 100%;
     height: 100%;
     overflow: hidden; /* Hide scrollbars */
+    opacity: 0;
+    transition-duration: 0.5s;
 }

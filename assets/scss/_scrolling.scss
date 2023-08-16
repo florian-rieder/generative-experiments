@@ -9,20 +9,11 @@
     height: 100vh;
     min-height: 36rem;
     opacity: 0; /* Start with zero opacity */
-    animation-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 
 .fade-in { /* Applied by scroll-interactions.js */
-    animation: fadeIn 0.5s ease-in-out forwards; /* Apply the animation */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    opacity: 1;
 }
 
 @media screen and (max-width: $md) {

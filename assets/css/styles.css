@@ -7,6 +7,29 @@
   font-family: code_light;
   src: url(../fonts/CODE\ Light.otf);
 }
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-section {
+  scroll-snap-align: center;
+  height: 100vh;
+  min-height: 36rem;
+  opacity: 0; /* Start with zero opacity */
+  transition-duration: 0.5s;
+}
+
+.fade-in { /* Applied by scroll-interactions.js */
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-section {
+    overflow-y: auto;
+  }
+}
 .canvas-container {
   height: 100vh;
   display: flex;
@@ -20,7 +43,6 @@
   padding: 4em;
 }
 .slide-details .slide-title {
-  margin-top: 2em;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -52,7 +74,7 @@
     width: 100%;
   }
   .slide-details {
-    padding: 0 1em 1em 1em;
+    padding: 1em;
     width: 100%;
     font-size: 12pt;
   }
@@ -111,37 +133,6 @@
     font-size: 36pt;
   }
 }
-.scroll-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-.scroll-section {
-  scroll-snap-align: center;
-  height: 100vh;
-  min-height: 36rem;
-  opacity: 0; /* Start with zero opacity */
-  animation-duration: 0.5s;
-}
-
-.fade-in { /* Applied by scroll-interactions.js */
-  animation: fadeIn 0.5s ease-in-out forwards; /* Apply the animation */
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@media screen and (max-width: 768px) {
-  .scroll-section {
-    overflow-y: auto;
-  }
-}
 .spinner {
   width: 30px;
   height: 30px;
@@ -193,4 +184,6 @@ iframe {
   width: 100%;
   height: 100%;
   overflow: hidden; /* Hide scrollbars */
+  opacity: 0;
+  transition-duration: 0.5s;
 }/*# sourceMappingURL=styles.css.map */
