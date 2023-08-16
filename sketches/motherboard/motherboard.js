@@ -1,4 +1,4 @@
-const margin = 50;
+const margin = 25;
 const hueConstraint = 30; // only take colors from a 90 degree arc on the hue circle
 const maxRectSize = 10;
 const missChance = 15 / 100;
@@ -47,7 +47,7 @@ function draw() {
 
         if (countFilledCells(filledCells) >= rows * columns) {
             noLoop();
-            writeTitle();
+            //writeTitle();
             return;
         }
     }

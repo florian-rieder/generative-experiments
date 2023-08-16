@@ -1,10 +1,10 @@
 @font-face {
-  font-family: square;
-  src: url(../fonts/Square.ttf);
+  font-family: code_bold;
+  src: url(../fonts/CODE\ Bold.otf);
 }
 @font-face {
-  font-family: squareo;
-  src: url(../fonts/Squareo.ttf);
+  font-family: code_light;
+  src: url(../fonts/CODE\ Light.otf);
 }
 .canvas-container {
   height: 100vh;
@@ -32,8 +32,11 @@
   color: grey;
   font-size: 10pt;
   font-weight: 200;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin-top: 0.4em; /* Adjust as needed */
+}
+.slide-title legend .legend-number {
+  letter-spacing: 1px;
 }
 
 @media (max-width: 767.98px) {
@@ -70,7 +73,8 @@
 #hero h1 {
   color: white;
   text-align: center;
-  font-family: square;
+  font-family: code_bold;
+  letter-spacing: 4px;
   /* offset-x | offset-y | blur-radius | color */
   text-shadow: 0px 5px 5px black;
 }

@@ -4,13 +4,13 @@ const margin = 0;
 let offsetX = 0;
 let angleIncrement = 0.015;
 let noiseIncrement = 0.015;
-let amplitudeReductionFactor = 1.0;
-let thicknessReductionFactor = 0.7;
-let numFrequencies = Math.round(Math.random() * 16);
-let numColors = Math.round(Math.random() * 16);
-let maxThickness = 100;
-let maxAmplitude = 100;
-let baseHue = Math.round(Math.random() * 360)
+let amplitudeReductionFactor = Math.random() * 0.5 + 0.5;
+let thicknessReductionFactor = Math.random() * 0.2 + 0.7;
+let numFrequencies = Math.round(Math.random() * 8);
+let numColors = Math.round(Math.random() * 6 + 2);
+let maxThickness = Math.round(Math.random() * (200 - 10) + 10);
+let maxAmplitude = Math.round(Math.random() * (200 - 10) + 10);
+let baseHue = Math.round(Math.random() * 360);
 let randomStep = Math.random() > 0.5;
 let resetAngle = Math.random() > 0.5;
 let keepWeights = false;
@@ -43,11 +43,20 @@ function setup() {
     generate();
 }
 
-function mousPressed() {
+function mousePressed() {
     generate();
 }
 
 function generate() {
+    amplitudeReductionFactor = Math.random() * 0.5 + 0.5;
+    thicknessReductionFactor = Math.random() * 0.2 + 0.7;
+    numFrequencies = Math.round(Math.random() * 8);
+    numColors = Math.round(Math.random() * 6 + 2);
+    maxThickness = Math.round(Math.random() * (200 - 10) + 10);
+    maxAmplitude = Math.round(Math.random() * (200 - 10) + 10);
+    baseHue = Math.round(Math.random() * 360);
+    randomStep = Math.random() > 0.5;
+    resetAngle = Math.random() > 0.5;
     background(color(baseHue, 15, 15));
 
     angle = 0;
@@ -58,7 +67,7 @@ function generate() {
     amplitude = maxAmplitude;
     columnX = -maxAmplitude + offsetX;
     x = columnX;
-    y = 0;
+    y = -maxThickness;
 
     // Generate color scheme based on a random hue
     colors = new Array();
@@ -118,7 +127,7 @@ function drawSquiggles() {
         // When we arrive at the bottom of the screen
         if (y > height) {
             columns++;
-            y = 0;
+            y = -maxThickness;
             if (randomStep) {
                 columnX += random(maxAmplitude / 2, maxAmplitude * 2) + offsetX;
             } else {
