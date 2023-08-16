@@ -2,7 +2,8 @@ const angleIncrement = 0.01;
 const noiseIncrement = 0.01;
 const amplitude = 100;
 const noiseAmplitude = 50;
-const step = 10;
+const step = 20;
+const hStep = 2;
 let speed = 1;
 
 const weights = generateWeights(3);
@@ -15,13 +16,13 @@ function setup() {
     background(0);
     stroke(255);
     noFill();
-    frameRate(24);
+    frameRate(60);
 
     currentTime = 0;
 
     // Pre-compute noise values and store them in the cache
     let noiseOffset = createVector(0, 0);
-    for (let y = -amplitude - noiseAmplitude; y < height + amplitude + noiseAmplitude; y += step) {
+    for (let y = 0; y < height; y += step) {
         for (let x = 0; x < width; x++) {
             noiseCache.push(noise(noiseOffset.x, noiseOffset.y));
             noiseOffset.x += noiseIncrement;
@@ -34,26 +35,23 @@ function setup() {
 function draw() {
     background(0);
     angle = currentTime;
-    noiseOffset = createVector(0, 0);
-
-    drawSinescape();
     currentTime += deltaTime;
+    drawSinescape();
 }
 
 function drawSinescape() {
-    let totalAmplitude = amplitude + noiseAmplitude;
-    for (let y = -totalAmplitude; y < height + totalAmplitude; y += step) {
+    for (let y = -step; y < height + step; y += step) {
         drawLine(y);
         angle = y * angleIncrement + currentTime / 250;
     }
 }
 
-
 function drawLine(offsetY) {
     beginShape();
-    for (let x = 0; x < width; x++) {
-        let y = harmonicSine(angle, weights) * amplitude + noiseCache[(x + (width * (offsetY / 10))) % noiseCache.length] * noiseAmplitude + offsetY;
-        //let y = sin(angle) * amplitude + noiseCache[(x + width * offsetY/10) % noiseCache.length] * noiseAmplitude + offsetY;
+    for (let x = -hStep; x < width; x+=hStep) {
+        const harmonicComponent = harmonicSine(angle, weights) * amplitude;
+        const noiseComponent = noiseCache[(x + (width * (offsetY / 10))) % noiseCache.length] * noiseAmplitude;
+        let y = harmonicComponent + noiseComponent + offsetY;
         angle += angleIncrement;
         vertex(x, y);
     }

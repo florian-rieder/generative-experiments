@@ -18,7 +18,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
         const spinner = entry.target.querySelector(".spinner");
 
         if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
+            entry.target.classList.add("active");
 
             // Lazy load iframes
             if (iframe.src === "") {
@@ -27,7 +27,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
                 // Hide the spinner once the iframe has loaded.
                 iframe.addEventListener("load", () => {
                     spinner.style.display = 'none';
-                    iframe.classList.add("fade-in");
+                    iframe.classList.add("active");
                 });
             }
 
@@ -36,7 +36,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
                 iframeWindow.loop();
             }
         } else {
-            entry.target.classList.remove("fade-in");
+            entry.target.classList.remove("active");
             // Pause p5.js sketch functions
             if (iframeWindow && iframeWindow.noLoop) {
                 iframeWindow.noLoop();

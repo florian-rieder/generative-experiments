@@ -2,7 +2,7 @@ const angleIncrement = 0.01;
 const noiseIncrement = 0.01;
 const amplitude = 100;
 const noiseAmplitude = 50;
-const step = 10;
+const step = 25;
 
 const weights = generateWeights(3);
 
@@ -20,7 +20,7 @@ function setup() {
 
     // Pre-compute noise values and store them in the cache
     let noiseOffset = createVector(0, 0);
-    for (let y = -amplitude - noiseAmplitude; y < height + amplitude + noiseAmplitude; y += step) {
+    for (let y = -step; y < height; y += step) {
         for (let x = 0; x < width; x++) {
             noiseOffset.x += noiseIncrement;
             noiseCache.push(noise(noiseOffset.x, noiseOffset.y));
@@ -40,23 +40,21 @@ function draw() {
     
     drawSinescape();
 
-    currentTime += 1;
+    currentTime += deltaTime;
 }
 
 function drawSinescape() {
-    let totalAmplitude = amplitude + noiseAmplitude;
-
-    for (let y = -totalAmplitude; y < height + totalAmplitude; y += step) {
+    for (let y = -step; y < height + step; y += step) {
         drawLine(y);
-        angle = y * angleIncrement + currentTime;
+        angle = y * angleIncrement + currentTime / 250;
     }
 }
 
 
 function drawLine(offsetY) {
     beginShape();
-    for (let x = 0; x < width; x++) {
-        let y = harmonicSine(angle, weights) * amplitude + noiseCache[(x + x * offsetY / 10) % noiseCache.length] * noiseAmplitude + offsetY;
+    for (let x = 0; x < width; x+= 2) {
+        let y = harmonicSine(angle, weights) * amplitude + noiseCache[(x + x / step * offsetY / 10) % noiseCache.length] * noiseAmplitude + offsetY;
         vertex(x, y);
         angle += angleIncrement;
     }

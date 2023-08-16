@@ -21,7 +21,7 @@
   transition-duration: 0.5s;
 }
 
-.fade-in { /* Applied by scroll-interactions.js */
+.active { /* Applied by scroll-interactions.js */
   opacity: 1;
 }
 

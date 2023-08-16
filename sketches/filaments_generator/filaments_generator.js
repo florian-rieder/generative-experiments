@@ -49,9 +49,9 @@ function mousePressed() {
 
 function generate() {
     amplitudeReductionFactor = Math.random() * 0.5 + 0.5;
-    thicknessReductionFactor = Math.random() * 0.2 + 0.7;
+    thicknessReductionFactor = Math.random() * 0.5 + 0.49;
     numFrequencies = Math.round(Math.random() * 8);
-    numColors = Math.round(Math.random() * 6 + 2);
+    numColors = Math.round(Math.random() * 8 + 8);
     maxThickness = Math.round(Math.random() * (200 - 10) + 10);
     maxAmplitude = Math.round(Math.random() * (200 - 10) + 10);
     baseHue = Math.round(Math.random() * 360);
