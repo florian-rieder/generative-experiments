@@ -1,31 +1,3 @@
-/* Smooth scroll snap */
-.scroll-container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-.scroll-section {
-    scroll-snap-align: center;
-    height: 100vh;
-    min-height: 36rem;
-    opacity: 0; /* Start with zero opacity */
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Artwork slides */
 .canvas-container {
     height: 100vh;
     display: flex;

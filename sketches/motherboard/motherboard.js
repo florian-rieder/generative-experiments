@@ -19,12 +19,17 @@ function setup() {
     columns = 100;
     rows = 100;
 
+    initialize();
+}
+
+function initialize(){
     cellSizeX = (width - 2 * margin) / columns;
     cellSizeY = (height - 2 * margin) / rows;
     internalMargin = min(cellSizeY, cellSizeX) / 2;
     strokeWeight(internalMargin);
 
     filledCells = new Array(rows).fill().map(() => new Array(columns).fill(false));
+    frameCount = 0;
 }
 
 function draw() {
@@ -59,7 +64,9 @@ function writeTitle() {
 
 function addRectangle() {
     // get the coordinates of the largest rectangle of empty grid space
-    const largestRectangle = maximalRectangle(filledCells, false);
+    let largestRectangle = maximalRectangle(filledCells, false);
+
+    if (!largestRectangle) return;
 
     // get two random points within the largest rectangle in grid coordinates
     const x1 = floor(random(largestRectangle.topLeftX, largestRectangle.bottomRightX));
@@ -166,4 +173,5 @@ function countFilledCells(grid) {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+    initialize();
 }

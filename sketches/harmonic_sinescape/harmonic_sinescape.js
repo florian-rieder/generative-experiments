@@ -10,7 +10,7 @@ const weights = generateWeights(3);
 const noiseCache = [];
 
 function setup() {
-    frameRate(1);
+    //frameRate(1);
     createCanvas(windowWidth, windowHeight);
     background(0);
     stroke(255);
@@ -28,14 +28,18 @@ function setup() {
         noiseOffset.y += noiseIncrement * 10;
         noiseOffset.x = 0;
     }
+
+    angle = currentTime;
+    drawSinescape();
+
 }
 
 function draw() {
     background(0);
-    angle = currentTime;
     noiseOffset = createVector(0, 0);
-
+    
     drawSinescape();
+
     currentTime += 1;
 }
 

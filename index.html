@@ -83,6 +83,29 @@
 
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
+                <iframe data-src="sketches/filaments_generator/index.html" loading="lazy" scrolling="no"></iframe>
+            </div>
+            <div class="pure-u-sm-1-2 slide-details">
+                <div class="slide-title">
+                    <h2>Générateur de filaments</h2>
+                    <legend>N° 1.4</legend>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellat vero cum vitae sed,
+                    assumenda et earum voluptate natus est, aperiam deserunt voluptatem facilis ipsa quidem fugit
+                    consectetur atque. Illo?
+                    Enim, placeat. Repellat ad repudiandae neque ipsam adipisci nostrum quae dolor quibusdam, eaque
+                    cumque sequi fuga, aliquid qui? Hic consectetur id nihil iusto culpa inventore dicta consequatur
+                    autem perferendis deserunt.
+                    Fugiat numquam sint iste, ex explicabo molestiae enim, ad minus soluta autem cumque praesentium
+                    repudiandae vero, asperiores nemo nesciunt in! Quod illum nam, animi dolores nostrum iste quidem
+                    consequuntur! Quas.</p>
+                <p><a href="sketches/filaments_generator">Open in full</a></p>
+            </div>
+        </div>
+
+        <div class="scroll-section pure-g">
+            <div class="canvas-container pure-u-sm-1-2">
                 <iframe data-src="sketches/schotter/index.html" loading="lazy" scrolling="no"></iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
@@ -130,47 +153,6 @@
     </div>
 </body>
 
-<script>
-    // Scroll animations and loading
-    const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5 // Adjust this threshold as needed
-    };
-
-    // Fade scroll sections in when scrolled into
-    const sections = document.querySelectorAll(".scroll-section");
-
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.id == "hero") return; // ignore main header
-                entry.target.classList.add("fade-in");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        sectionObserver.observe(section);
-    });
-
-    const iframes = document.querySelectorAll("iframe[data-src]");
-
-    const iframeObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const iframe = entry.target;
-                iframe.src = iframe.getAttribute("data-src");
-                iframe.removeAttribute("data-src");
-                iframeObserver.unobserve(iframe);
-            }
-        });
-    }, observerOptions);
-
-    iframes.forEach(iframe => {
-        iframeObserver.observe(iframe);
-    });
-</script>
+<script src="scroll-interactions.js"></script>
 
 </html>

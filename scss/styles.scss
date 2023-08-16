@@ -1,5 +1,7 @@
-@import "slides";
 @import "fonts";
+@import "slides";
+@import "hero";
+@import "scrolling";
 
 
 body {
@@ -21,15 +23,6 @@ p {
     letter-spacing: -0.25px;
 }
 
-.splash-container {
-    /* background: rgb(2,0,36);
-    background: linear-gradient(250deg, rgba(2,0,36,1) 0%, rgba(39,39,77,1) 35%, rgba(36,74,82,1) 100%); */
-    background: rgb(28,41,107);
-    background: radial-gradient(circle, rgba(28,41,107,1) 0%, rgba(126,43,60,1) 100%); 
-    background-size: 400% 400%;
-    animation: gradient 60s ease infinite;
-}
-
 iframe {
     padding: 0;
     margin: 0;
@@ -37,35 +30,4 @@ iframe {
     width: 100%;
     height: 100%;
     overflow: hidden; /* Hide scrollbars */
-}
-
-#hero {
-    height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4em;
-    opacity: 1;
-}
-
-#hero h1 {
-    color: white;
-    text-align: center;
-    font-family: square;
-    /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 0px 5px 5px black;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
