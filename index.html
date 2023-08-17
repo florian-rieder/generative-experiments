@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of generative artworks made in p5.js during the 2023 spring course 'Generative Art' given by Isaac Pante at the University of Lausanne (UNIL)">
+    <meta name="author" content="Florian Rieder">
     <title>Experiments in Generative Art</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
-        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <div class="scroll-container">
-        <div id="hero" class="scroll-section">
+    <div class="scroll-container" role="main">
+        <div id="hero" class="scroll-section" role="banner">
             <div>
                 <h1>Experiments in Generative Art</h1>
             </div>
@@ -23,7 +25,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/motherboard/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/motherboard/index.html"
+                    title="Motherboard"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -37,8 +44,8 @@
                 <p>Essentiellement un exercice en "rectangle packing" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.</p>
 
                 <div class="slide-links">
-                    <a href="sketches/motherboard" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/motherboard/motherboard.js" target="_blank">Source code</a>
+                    <a href="sketches/motherboard" target="_blank" arial-label="Open the Motherboard sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/motherboard/motherboard.js" target="_blank"  arial-label="Open the source code for the Motherboard sketch">Source code</a>
                 </div>
             </div>
         </div>
@@ -46,7 +53,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/waves_sinescape/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/waves_sinescape/index.html"
+                    title="Waves Sinescape"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -65,8 +77,8 @@
                     voluptate, excepturi ullam veritatis quas consequuntur?
                 </p>
                 <div class="slide-links">
-                    <a href="sketches/waves_sinescape" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/waves_sinescape/waves_sinescape.js" target="_blank">Source code</a>
+                    <a href="sketches/waves_sinescape" target="_blank"  arial-label="Open the Waves Sinescape sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/waves_sinescape/waves_sinescape.js" target="_blank" arial-label="Open the source code for the Waves Sinescape sketch">Source code</a>
                 </div>
             </div>
         </div>
@@ -74,7 +86,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/harmonic_sinescape/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/harmonic_sinescape/index.html"
+                    title="Harmonic Sinescape"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -93,8 +110,8 @@
                     voluptate, excepturi ullam veritatis quas consequuntur?
                 </p>
                 <div class="slide-links">
-                    <a href="sketches/harmonic_sinescape" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/harmonic_sinescape/harmonic_sinescape.js" target="_blank">Source code</a>
+                    <a href="sketches/harmonic_sinescape" target="_blank" arial-label="Open the Harmonic Sinescape sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/harmonic_sinescape/harmonic_sinescape.js" target="_blank" arial-label="Open the source code for the Harmonic Sinescape sketch">Source code</a>
                 </div>
             </div>
         </div>
@@ -102,7 +119,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/filaments/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/filaments/index.html"
+                    title="Filaments"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -123,8 +145,8 @@
                     repudiandae vero, asperiores nemo nesciunt in! Quod illum nam, animi dolores nostrum iste quidem
                     consequuntur! Quas.</p>
                 <div class="slide-links">
-                    <a href="sketches/filaments" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments/filaments.js" target="_blank">Source code</a>
+                    <a href="sketches/filaments" target="_blank" arial-label="Open the Filaments sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments/filaments.js" target="_blank"  arial-label="Open the source code for the Filaments sketch">Source code</a>
                 </div>
             </div>
         </div>
@@ -132,7 +154,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/filaments_generator/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/filaments_generator/index.html"
+                    title="Générateur de filaments"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -154,8 +181,8 @@
                     consequuntur! Quas.</p>
 
                 <div class="slide-links">
-                    <a href="sketches/filaments_generator" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments_generator/filaments_generator.js" target="_blank">Source code</a>
+                    <a href="sketches/filaments_generator" target="_blank" arial-label="Open the Générateur de Filaments sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments_generator/filaments_generator.js" target="_blank" arial-label="Open the source code for the Générateur de Filaments sketch">Source code</a>
                 </div>
             </div>
         </div>
@@ -163,7 +190,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/schotter/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/schotter/index.html"
+                    title="Schotter"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -184,8 +216,8 @@
                     repudiandae vero, asperiores nemo nesciunt in! Quod illum nam, animi dolores nostrum iste quidem
                     consequuntur! Quas.</p>
                 <div class="slide-links">
-                    <a href="sketches/schotter" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/schotter/schotter.js" target="_blank">Source code</a>
+                    <a href="sketches/schotter" target="_blank" arial-label="Open the Schotter sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/schotter/schotter.js" target="_blank" arial-label="Open the source code for the Schotter sketch">Source code</a>
                 </div>
             </div>
         </div>
@@ -193,7 +225,12 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/werkstatt/index.html" loading="lazy" scrolling="no"></iframe>
+                <iframe
+                    data-src="sketches/werkstatt/index.html"
+                    title="Werkstatt Edition Kroll (Untitled)"
+                    loading="lazy"
+                    scrolling="no">
+                </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
                 <div class="slide-title">
@@ -214,8 +251,8 @@
                     repudiandae vero, asperiores nemo nesciunt in! Quod illum nam, animi dolores nostrum iste quidem
                     consequuntur! Quas.</p>
                 <div class="slide-links">
-                    <a href="sketches/werkstatt" target="_blank">Open in full</a>
-                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/werkstatt/werkstatt.js" target="_blank">Source code</a>
+                    <a href="sketches/werkstatt" target="_blank"  arial-label="Open the Werkstatt Edition Kroll (Untitled) sketch in full">Open in full</a>
+                    <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/werkstatt/werkstatt.js" target="_blank"  arial-label="Open the source code for the  Werkstatt Edition Kroll (Untitled) sketch">Source code</a>
                 </div>
             </div>
         </div>
