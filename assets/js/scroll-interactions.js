@@ -18,6 +18,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
         const spinner = entry.target.querySelector(".spinner");
 
         if (entry.isIntersecting) {
+            // Fade section in
             entry.target.classList.add("active");
 
             // Lazy load iframes
@@ -31,13 +32,14 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
                 });
             }
 
-            // Resume p5.js sketch functions
+            // Resume p5.js sketch
             if (iframeWindow && iframeWindow.loop) {
                 iframeWindow.loop();
             }
         } else {
+            // Fade section out
             entry.target.classList.remove("active");
-            // Pause p5.js sketch functions
+            // Pause p5.js sketch
             if (iframeWindow && iframeWindow.noLoop) {
                 iframeWindow.noLoop();
             }

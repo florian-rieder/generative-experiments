@@ -12,8 +12,9 @@
     transition-duration: 0.5s;
 }
 
-.active { /* Applied by scroll-interactions.js */
-    opacity: 1;
+.active {
+    /* Applied by scroll-interactions.js */
+    opacity: 1 !important;
 }
 
 @media screen and (max-width: $md) {

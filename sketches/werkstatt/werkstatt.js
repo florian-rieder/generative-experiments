@@ -5,7 +5,7 @@ let margin = 20;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-	noFill();
+    noFill();
     stroke(0);
     strokeWeight(1);
     strokeJoin(BEVEL);
@@ -13,12 +13,12 @@ function setup() {
 }
 
 function mousePressed() {
-	drawGrid();
+    drawGrid();
 }
 
 function drawGrid() {
-    margin = height * 8/100; // margin of 8% on each side
-	background(255, 32, 32); // Set the background to a bloody red
+    margin = height * 8 / 100; // margin of 8% on each side
+    background(255, 32, 32); // Set the background to a bloody red
     // Calculate the size of each cell based on the available space within the canvas
     cellSize = min((width - margin * 2) / numColumns, (height - margin * 2) / numRows);
     // Calculate the position of the top-left corner of the grid based on the available space within the canvas
@@ -39,17 +39,17 @@ function drawCell(x, y, cellSize, cellNumber) {
     // Choose the number of points to connect based on the cell number
     let numPoints = cellNumber + 2;
     // Generate the points randomly around the circle
-		let points = new Array();
+    let points = new Array();
     let radius = cellSize / 2;
     for (let i = 0; i < numPoints; i++) {
-				// ChatGPT prompt: How do I get a random point on the periphery of a circle in p5.js ?
+        // ChatGPT prompt: How do I get a random point on the periphery of a circle in p5.js ?
         let angle = random(0, TWO_PI);
-				let px = x + cos(angle) * radius;
+        let px = x + cos(angle) * radius;
         let py = y + sin(angle) * radius;
-				points.push(createVector(px, py));
+        points.push(createVector(px, py));
     }
     // Connect the points in a random order
-		shuffleArray(points);
+    shuffleArray(points);
     beginShape();
     for (let i = 0; i < numPoints; i++) {
         vertex(points[i].x, points[i].y);

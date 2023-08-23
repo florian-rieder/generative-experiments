@@ -2,7 +2,7 @@ const angleIncrement = 0.01;
 const noiseIncrement = 0.01;
 const amplitude = 100;
 const noiseAmplitude = 50;
-const step = 25;
+const step = 20;
 
 const weights = generateWeights(3);
 
@@ -37,7 +37,7 @@ function setup() {
 function draw() {
     background(0);
     noiseOffset = createVector(0, 0);
-    
+
     drawSinescape();
 
     currentTime += deltaTime;
@@ -53,7 +53,7 @@ function drawSinescape() {
 
 function drawLine(offsetY) {
     beginShape();
-    for (let x = 0; x < width; x+= 2) {
+    for (let x = 0; x < width; x += 3) {
         let y = harmonicSine(angle, weights) * amplitude + noiseCache[(x + x / step * offsetY / 10) % noiseCache.length] * noiseAmplitude + offsetY;
         vertex(x, y);
         angle += angleIncrement;

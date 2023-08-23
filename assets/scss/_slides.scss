@@ -4,6 +4,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    iframe {
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Hide scrollbars */
+        opacity: 0;
+        transition-duration: 0.5s;
+    }
 }
 
 .slide-details {
@@ -29,7 +40,8 @@
             margin-top: 0.4em;
             font-kerning: none;
 
-            .legend-number-header, .legend-number {
+            .legend-number-header,
+            .legend-number {
                 display: flex;
                 justify-content: space-between;
             }

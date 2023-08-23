@@ -22,7 +22,7 @@ function setup() {
     initialize();
 }
 
-function initialize(){
+function initialize() {
     cellSizeX = (width - 2 * margin) / columns;
     cellSizeY = (height - 2 * margin) / rows;
     internalMargin = min(cellSizeY, cellSizeX) / 2;

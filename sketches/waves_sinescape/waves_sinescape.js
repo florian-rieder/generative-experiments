@@ -48,7 +48,7 @@ function drawSinescape() {
 
 function drawLine(offsetY) {
     beginShape();
-    for (let x = -hStep; x < width; x+=hStep) {
+    for (let x = -hStep; x < width; x += hStep) {
         const harmonicComponent = harmonicSine(angle, weights) * amplitude;
         const noiseComponent = noiseCache[(x + (width * (offsetY / 10))) % noiseCache.length] * noiseAmplitude;
         let y = harmonicComponent + noiseComponent + offsetY;
