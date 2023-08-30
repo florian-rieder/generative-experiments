@@ -48,6 +48,15 @@
         }
     }
 
+    .slide-interactions {
+        padding: 0.5em 0 0 0;
+
+        i {
+            color: lightgrey;
+            margin-right: 1em;
+        }
+    }
+
     .slide-links {
         a {
             margin-right: 1em;
@@ -65,6 +74,29 @@
         padding: 1em;
         width: 100%;
         font-size: 12pt;
+
+        .slide-title {
+            h2 {
+                font-size: 20pt;
+            }
+
+            legend {
+                margin-top: 2px;
+                font-size: 8pt;
+
+                .legend-number-header {
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $xxl){
+
+    .slide-details {
+        padding: 1em;
+        font-size: 16pt;
 
         .slide-title {
             h2 {

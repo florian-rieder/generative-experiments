@@ -10,10 +10,6 @@ function setup() {
     drawSchotter();
 }
 
-function mousePressed() {
-    drawSchotter();
-}
-
 function drawSchotter() {
     background(255);
 
@@ -46,6 +42,11 @@ function drawSchotter() {
     }
     pop()
 }
+
+function mousePressed() {
+    drawSchotter();
+}
+
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
