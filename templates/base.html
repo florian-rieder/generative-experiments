@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A collection of generative artworks made in p5.js during the 2023 spring course 'Generative Art' given by Isaac Pante at the University of Lausanne (UNIL)">
+    <meta name="author" content="Florian Rieder">
+    <title>Experiments in Generative Art</title>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="scroll-container" role="main">
+        <div id="hero" class="scroll-section" role="banner">
+            <div>
+                <h1>Experiments in Generative Art</h1>
+            </div>
+        </div>
+
+        {% for item in item_list %}
+        <div class="scroll-section pure-g">
+            <div class="canvas-container pure-u-sm-1-2">
+                <div class="spinner"></div>
+                <iframe data-src="{{item.iframe_src}}" title="{{item.title}}" loading="lazy" scrolling="no">
+                </iframe>
+            </div>
+            <div class="pure-u-sm-1-2 slide-details">
+                <div class="slide-title">
+                    <h2>{{item.title}}</h2>
+                    <legend>
+                        <div class="legend-number-header"><span>N</span><span>°</span></div>
+                        <div class="legend-number">{{item.number}}</div>
+                    </legend>
+                </div>
+
+                <p>{{item.description}}</p>
+                <div class="slide-links">
+                    <a href="{{item.iframe_src}}" target="_blank"
+                        aria-label="Open the {{item.title}} sketch in full">Open in
+                        full</a>
+                    <a href="{{item.source}}"
+                        target="_blank" aria-label="Open the source code for the {{item.title}} sketch">Source code</a>
+                    {% if item.original %}
+                    <a href="{{item.original}}" target="_blank"
+                        aria-label="Open original of {{item.title}}">Open original</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+
+<script src="assets/js/scroll-interactions.js"></script>
+
+</html>
