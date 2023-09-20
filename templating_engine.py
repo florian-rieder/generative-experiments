@@ -1,5 +1,13 @@
 
-# https://chat.openai.com/share/7db97f52-17e8-44a1-ad75-ec364a2c9915
+"""
+    Static site generator
+    ---------------------
+    Renders index.html upon modifications to either templates or data
+    files.
+
+    This file was built using GPT 3.5:
+    https://chat.openai.com/share/7db97f52-17e8-44a1-ad75-ec364a2c9915
+"""
 
 import time
 import json
@@ -22,9 +30,9 @@ def compile():
 
 
 def render_and_save(data):
+    """Function to render and save the rendered HTML"""
     # Load the index template
     index_template = env.get_template('base.html')
-    # Function to compile and save the rendered HTML
     # Render the index template with data
     rendered_html = index_template.render(item_list=data)
 
@@ -34,18 +42,17 @@ def render_and_save(data):
 
 
 def load_data_from_json(json_file):
-    # Function to load data from JSON file
+    """Function to load data from JSON file"""
     with open(json_file, 'r') as f:
         data = json.load(f)
     return data
 
 
 class FileChangeHandler(FileSystemEventHandler):
-    # Watchdog event handler
+    """Watchdog event handler"""
+
     def on_modified(self, event):
-        if event.src_path.endswith('index.html'):
-            return
-        if event.src_path.endswith('.html') or event.src_path.endswith('data.json'):
+        if event.src_path.endswith('base.html') or event.src_path.endswith('data.json'):
             print("HTML or JSON file modified. Compiling and saving...")
             compile()
 
