@@ -29,3 +29,15 @@ h2 {
 p {
     letter-spacing: -0.25px;
 }
+
+/* Mouse selection colors*/
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: black;
+}
+
+::selection {
+    color: white;
+    background: black;
+}

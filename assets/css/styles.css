@@ -57,7 +57,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  /* Square typgraphic unit using the N° and the numbers to form a square */
+  /* Square typographic unit using the N° and the numbers to form a square */
 }
 .slide-details .slide-title h2 {
   margin: 0;
@@ -205,4 +205,16 @@ h2 {
 
 p {
   letter-spacing: -0.25px;
+}
+
+/* Mouse selection colors*/
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
 }/*# sourceMappingURL=styles.css.map */
