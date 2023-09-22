@@ -101,6 +101,22 @@
     margin-bottom: -2px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .slide-details {
+    padding: 1em;
+    font-size: 16pt;
+  }
+  .slide-details .slide-title h2 {
+    font-size: 20pt;
+  }
+  .slide-details .slide-title legend {
+    margin-top: 2px;
+    font-size: 8pt;
+  }
+  .slide-details .slide-title legend .legend-number-header {
+    margin-bottom: -2px;
+  }
+}
 #hero {
   height: 100%;
   box-sizing: border-box;
