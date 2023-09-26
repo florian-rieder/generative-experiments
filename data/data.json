@@ -3,66 +3,57 @@
         "title": "Schotter",
         "number": "1.1",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/schotter/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/schotter/schotter.js",
+        "slug": "schotter",
         "original": "http://dada.compart-bremen.de/item/artwork/1"
     },
     {
         "title": "Untitled (Werkstatt Edition Kroll)",
         "number": "1.2",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/werkstatt/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/werkstatt/werkstatt.js",
+        "slug": "werkstatt",
         "original": "https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/"
     },
     {
         "title": "Untitled (Bild 13)",
         "number": "1.3",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/bild13/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/bild13/bild13.js",
+        "slug": "bild13",
         "original": "http://dada.compart-bremen.de/item/artwork/1456"
     },
     {
         "title": "Motherboard",
         "number": "2.1",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/motherboard/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/motherboard/motherboard.js"
+        "slug": "motherboard"
     },
     {
         "title": "Waves Sinescape",
         "number": "2.2",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/waves-sinescape/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/waves-sinescape/waves-sinescape.js"
+        "slug": "waves-sinescape"
     },
     {
         "title": "Golden Sinescape",
         "number": "2.3",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/golden-sinescape/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/golden-sinescape/golden-sinescape.js"
+        "slug": "golden-sinescape"
     },
     {
         "title": "Filaments",
         "number": "2.4",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/filaments/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments/filaments.js"
+        "slug": "filaments"
     },
     {
         "title": "Générateur de filaments",
         "number": "2.5",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/filaments-generator/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments-generator/filaments-generator.js"
+        "slug": "filaments-generator"
     },
     {
         "title": "Moiré",
         "number": "2.6",
         "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
-        "iframe_src": "sketches/moire/index.html",
-        "source": "https://github.com/florian-rieder/generative-experiments/blob/main/sketches/moire/moire.js"
+        "slug": "moire"
     }
 ]
