@@ -87,12 +87,12 @@ function generate() {
         weights = generateWeights(numFrequencies);
     }
 
-    drawSquiggles();
+    drawFilaments();
     //drawFrame();
     //writeTitle();
 }
 
-function drawSquiggles() {
+function drawFilaments() {
     // don't worry about it, there's a return statement in there !
     // noprotect
     while (true) {

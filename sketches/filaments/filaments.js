@@ -17,13 +17,18 @@ function setup() {
     noStroke();
 
     initialize();
-    drawSquiggles();
-    //drawFrame();
-    //writeTitle();
+    drawFilaments();
+}
+
+function mousePressed() {
+    initialize();
+    drawFilaments();
 }
 
 function initialize() {
     // Generate color scheme based on a random hue
+    amplitude = maxAmplitude;
+    colors = new Array();
     baseHue = random(0, 360);
     background(color(baseHue, 15, 15));
     for (i = 0; i < numColors; i++) {
@@ -40,7 +45,7 @@ function initialize() {
 
 }
 
-function drawSquiggles() {
+function drawFilaments() {
     // don't worry about it, there's a return statement in there !
     // noprotect
     while (true) {
@@ -72,25 +77,8 @@ function drawSquiggles() {
     }
 }
 
-function drawFrame() {
-    fill(255); // frame color
-    rect(0, 0, width, margin); // top margin
-    rect(0, height - margin, width, margin); // bottom margin
-    rect(0, 0, margin, height); // left margin
-    rect(width - margin, 0, margin, height); // right margin
-}
-
-function writeTitle() {
-    textFont("Courier New");
-    textSize(titleSize);
-    textAlign(RIGHT);
-    fill(0);
-    const serial = "Filaments-" + round(baseHue);
-    text(serial, width - margin, height - margin / 2 + titleSize / 4);
-}
-
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     initialize();
-    drawSquiggles();
+    drawFilaments();
 }
