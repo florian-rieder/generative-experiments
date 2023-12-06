@@ -23,8 +23,10 @@
 <body>
     <div class="scroll-container" role="main">
         <div id="hero" class="scroll-section" role="banner">
-            <div>
-                <h1>Experiments in Generative Art</h1>
+            <h1>Experiments in Generative Art</h1>
+            <div class="hero-content">
+                <p>This site showcases three series of generative artworks, made for the "Generative Art" course given
+                    by Isaac Pante (SLI, UNIL) during the spring semester 2023.</p>
             </div>
         </div>
 
@@ -32,7 +34,8 @@
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
-                <iframe data-src="sketches/{{item.slug}}/index.html" title="{{item.title}}" loading="lazy" scrolling="no">
+                <iframe data-src="sketches/{{item.slug}}/index.html" title="{{item.title}}" loading="lazy"
+                    scrolling="no">
                 </iframe>
             </div>
             <div class="pure-u-sm-1-2 slide-details">
@@ -43,6 +46,7 @@
                         <div class="legend-number">{{item.number}}</div>
                     </legend>
                 </div>
+                <h3>{{item.serie}}</h3>
 
                 <p>{{item.description}}</p>
                 <div class="slide-links">
@@ -52,8 +56,8 @@
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/{{item.slug}}/{{item.slug}}.js"
                         target="_blank" aria-label="Open the source code for the {{item.title}} sketch">Source code</a>
                     {% if item.original %}
-                    <a href="{{item.original}}" target="_blank"
-                        aria-label="Open original of {{item.title}}">Open original</a>
+                    <a href="{{item.original}}" target="_blank" aria-label="Open original of {{item.title}}">Open
+                        original</a>
                     {% endif %}
                 </div>
             </div>

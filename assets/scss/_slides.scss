@@ -48,6 +48,12 @@
         }
     }
 
+    h3 {
+        margin: 0;
+        color: rgb(73, 73, 73);
+        font-weight: 400;
+    }
+
     .slide-links {
         a {
             margin-right: 1em;
@@ -83,8 +89,7 @@
     }
 }
 
-@media screen and (min-width: $xxl){
-
+@media screen and (min-width: $xxl) {
     .slide-details {
         padding: 1em;
         font-size: 16pt;

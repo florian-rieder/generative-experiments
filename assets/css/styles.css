@@ -76,6 +76,11 @@
   display: flex;
   justify-content: space-between;
 }
+.slide-details h3 {
+  margin: 0;
+  color: rgb(73, 73, 73);
+  font-weight: 400;
+}
 .slide-details .slide-links a {
   margin-right: 1em;
 }
@@ -132,14 +137,21 @@
   background: radial-gradient(circle, rgb(28, 41, 107) 0%, rgb(126, 43, 60) 100%);
   background-size: 400% 400%;
   animation: gradient 60s ease infinite;
+  color: white;
 }
 #hero h1 {
-  color: white;
   text-align: center;
   font-family: code_bold;
   letter-spacing: 4px;
   /* offset-x | offset-y | blur-radius | color */
   text-shadow: 0px 5px 5px black;
+}
+#hero .hero-content {
+  display: flex;
+  justify-content: center;
+}
+#hero .hero-content p {
+  width: 50%;
 }
 
 @keyframes gradient {

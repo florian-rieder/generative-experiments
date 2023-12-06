@@ -13,14 +13,22 @@
     background: radial-gradient(circle, rgba(28, 41, 107, 1) 0%, rgba(126, 43, 60, 1) 100%);
     background-size: 400% 400%;
     animation: gradient 60s ease infinite;
+    color: white;
 
     h1 {
-        color: white;
         text-align: center;
         font-family: code_bold;
         letter-spacing: 4px;
         /* offset-x | offset-y | blur-radius | color */
         text-shadow: 0px 5px 5px black;
+    }
+
+    .hero-content {
+        display: flex;
+        justify-content: center;
+        p {
+            width: 50%;
+        }
     }
 }
 
