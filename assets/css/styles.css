@@ -140,6 +140,7 @@
   color: white;
 }
 #hero h1 {
+  font-size: 40pt;
   text-align: center;
   font-family: code_bold;
   letter-spacing: 4px;
@@ -151,7 +152,12 @@
   justify-content: center;
 }
 #hero .hero-content p {
-  width: 50%;
+  font-size: 18pt;
+  width: 60%;
+  text-align: center;
+}
+#hero #by {
+  font-weight: 400;
 }
 
 @keyframes gradient {
@@ -165,12 +171,28 @@
     background-position: 0% 50%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 568px) {
   #hero {
     padding: 1em;
   }
   #hero h1 {
     font-size: 36pt;
+  }
+  #hero .hero-content p {
+    width: 80%;
+    font-size: 16pt;
+  }
+}
+@media screen and (max-width: 568px) {
+  #hero {
+    padding: 1em;
+  }
+  #hero h1 {
+    font-size: 24pt;
+  }
+  #hero .hero-content p {
+    width: 100%;
+    padding: 10px;
   }
 }
 .spinner {

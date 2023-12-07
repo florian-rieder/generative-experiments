@@ -3,7 +3,7 @@
         "title": "Schotter",
         "serie": "Hommage à Georg Nees",
         "number": "1.1",
-        "description": "Schotter est une des oeuvres les plus connues de Georg Nees, artiste allemand pionnier de l'art génératif dans les années 60. L'oeuvre est composée d'une grille de carrés, de plus en plus dérangés.",
+        "description": "Schotter est une des oeuvres les plus connues de Georg Nees, artiste allemand pionnier de l'art génératif dans les années 60. L'oeuvre est composée d'une grille de carrés, de plus en plus dérangés.<br>Cliquez pour regénérer.",
         "slug": "schotter",
         "original": "http://dada.compart-bremen.de/item/artwork/1"
     },
@@ -11,7 +11,7 @@
         "title": "Untitled (Werkstatt Edition Kroll)",
         "serie": "Hommage à Georg Nees",
         "number": "1.2",
-        "description": "Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont aléatoirement tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.",
+        "description": "Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont aléatoirement tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.<br>Cliquez pour regénérer.",
         "slug": "werkstatt",
         "original": "https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/"
     },
@@ -19,7 +19,7 @@
         "title": "Untitled (Bild 13)",
         "serie": "Hommage à Georg Nees",
         "number": "1.3",
-        "description": "Deux ensembles de cercles qui se rejoignent en un point tangent.",
+        "description": "Deux ensembles de cercles qui se rejoignent en un point tangent.<br>Cliquez pour regénérer.",
         "slug": "bild13",
         "original": "http://dada.compart-bremen.de/item/artwork/1456"
     },
@@ -34,7 +34,7 @@
         "title": "Moiré",
         "serie": "Géométries simples",
         "number": "2.2",
-        "description": "Cette expérience vise à reproduire l'effet de Moiré, en superposant trois grilles en rotation.",
+        "description": "Cette expérience vise à reproduire l'effet de Moiré, en superposant plusieurs grilles en rotation.",
         "slug": "moire"
     },
     {
@@ -62,14 +62,14 @@
         "title": "Générateur de filaments",
         "serie": "Sinescapes",
         "number": "3.3",
-        "description": "Probablement mon oeuvre la plus aboutie, ce générateur de filaments dispose de 12 paramètres, choisis au hasard à chaque génération, qui produisent une grande variété de formes et de textures. Cliquez pour regénérer.",
+        "description": "Probablement mon oeuvre la plus aboutie, ce générateur de filaments dispose de 12 paramètres, choisis au hasard à chaque génération, qui produisent une grande variété de formes et de textures.<br>Cliquez pour regénérer.",
         "slug": "filaments-generator"
     },
     {
         "title": "Filaments",
         "serie": "Sinescapes",
         "number": "3.3b",
-        "description": "Une sélection de paramètres avec le générateur précédent, qui produit des filaments à la fois ordonnés et chaotiques, provoquant une expérience esthétique singulière.",
+        "description": "Une sélection de paramètres avec le générateur précédent, qui produit des filaments à la fois ordonnés et chaotiques, provoquant une expérience esthétique singulière.<br>Cliquez pour regénérer.",
         "slug": "filaments"
     }
 ]

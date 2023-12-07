@@ -16,6 +16,7 @@
     color: white;
 
     h1 {
+        font-size: 40pt;
         text-align: center;
         font-family: code_bold;
         letter-spacing: 4px;
@@ -27,8 +28,14 @@
         display: flex;
         justify-content: center;
         p {
-            width: 50%;
+            font-size: 18pt;
+            width: 60%;
+            text-align: center;
         }
+    }
+
+    #by {
+        font-weight: 400;
     }
 }
 
@@ -44,12 +51,32 @@
     }
 }
 
-@media screen and (max-width: $md) {
+@media screen and (max-width: $md) and (min-width: $sm) {
     #hero {
         padding: 1em;
 
         h1 {
             font-size: 36pt;
+        }
+
+        .hero-content p {
+            width: 80%;
+            font-size: 16pt;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    #hero {
+        padding: 1em;
+
+        h1 {
+            font-size: 24pt;
+        }
+
+        .hero-content p {
+            width: 100%;
+            padding: 10px;
         }
     }
 }

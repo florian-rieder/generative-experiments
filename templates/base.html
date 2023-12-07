@@ -24,9 +24,10 @@
     <div class="scroll-container" role="main">
         <div id="hero" class="scroll-section" role="banner">
             <h1>Experiments in Generative Art</h1>
+            <div id="by">Par Florian Rieder</div>
             <div class="hero-content">
-                <p>This site showcases three series of generative artworks, made for the "Generative Art" course given
-                    by Isaac Pante (SLI, UNIL) during the spring semester 2023.</p>
+                <p>Ce site présente trois séries d'œuvres d'art génératives, réalisées dans le cadre du cours
+                    "Art Génératif" donné par Isaac Pante (SLI, UNIL) durant le semestre de printemps 2023.</p>
             </div>
         </div>
 
@@ -48,7 +49,7 @@
                 </div>
                 <h3>{{item.serie}}</h3>
 
-                <p>{{item.description}}</p>
+                <p>{{item.description|safe}}</p>
                 <div class="slide-links">
                     <a href="sketches/{{item.slug}}/index.html" target="_blank"
                         aria-label="Open the {{item.title}} sketch in full">Open in
