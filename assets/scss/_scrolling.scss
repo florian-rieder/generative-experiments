@@ -8,13 +8,15 @@
     scroll-snap-align: center;
     height: 100vh;
     min-height: 36rem;
-    opacity: 0; /* Start with zero opacity */
+    opacity: 0; // Start with zero opacity
     transition-duration: 0.5s;
 }
 
 .active {
-    /* Applied by scroll-interactions.js */
+    // Applied by scroll-interactions.js
+    // reset the changed styles
     opacity: 1 !important;
+    transform: translate(0, 0) !important;
 }
 
 @media screen and (max-width: $md) {

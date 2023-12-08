@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: code_bold;
   src: url(../fonts/CODE\ Bold.otf);
@@ -17,13 +16,13 @@
   scroll-snap-align: center;
   height: 100vh;
   min-height: 36rem;
-  opacity: 0; /* Start with zero opacity */
+  opacity: 0;
   transition-duration: 0.5s;
 }
 
 .active {
-  /* Applied by scroll-interactions.js */
   opacity: 1 !important;
+  transform: translate(0, 0) !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,7 +56,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  /* Square typographic unit using the N° and the numbers to form a square */
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition-duration: 0.5s;
 }
 .slide-details .slide-title h2 {
   margin: 0;
@@ -76,17 +77,28 @@
   display: flex;
   justify-content: space-between;
 }
+.slide-details h3 {
+  margin: 0;
+  color: rgb(73, 73, 73);
+  font-weight: 400;
+  transform: translate(0, 100px);
+  transition-duration: 0.5s;
+}
+.slide-details p {
+  transform: translate(0, 100px);
+  transition-duration: 0.55s;
+  opacity: 0;
+}
 .slide-details br {
-  /* Change height of br: see https://stackoverflow.com/a/28310011/10914628 */
   content: "";
   margin: 2em;
   display: block;
   font-size: 24%;
 }
-.slide-details h3 {
-  margin: 0;
-  color: rgb(73, 73, 73);
-  font-weight: 400;
+.slide-details .slide-links {
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition-duration: 0.6s;
 }
 .slide-details .slide-links a {
   margin-right: 1em;

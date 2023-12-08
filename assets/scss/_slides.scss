@@ -26,12 +26,17 @@
         align-items: flex-start;
         justify-content: space-between;
 
+        // transition
+        transform: translate(0, 100px);
+        opacity: 0;
+        transition-duration: 0.5s;
+
         h2 {
             margin: 0;
         }
 
-        /* Square typographic unit using the N° and the numbers to form a square */
         legend {
+            // Square typographic unit using the N° and the numbers to form a square
             text-align: right;
             color: grey;
             font-size: 9pt;
@@ -48,24 +53,40 @@
         }
     }
 
+    h3 {
+        margin: 0;
+        color: rgb(73, 73, 73);
+        font-weight: 400;
+
+        // transition
+        transform: translate(0, 100px);
+        transition-duration: 0.5s;
+    }
+
+    p {
+        // transition
+        transform: translate(0, 100px);
+        transition-duration: 0.55s;
+        opacity: 0;
+    }
+
     br {
-        /* Change height of br: see https://stackoverflow.com/a/28310011/10914628 */
+        // Change height of br: see https://stackoverflow.com/a/28310011/10914628
         content: "";
         margin: 2em;
         display: block;
         font-size: 24%;
     }
 
-    h3 {
-        margin: 0;
-        color: rgb(73, 73, 73);
-        font-weight: 400;
-    }
-
     .slide-links {
         a {
             margin-right: 1em;
         }
+
+        // transition
+        transform: translate(0, 100px);
+        opacity: 0;
+        transition-duration: 0.6s;
     }
 }
 
