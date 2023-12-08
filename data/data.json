@@ -41,7 +41,7 @@
         "title": "Lignes",
         "serie": "Géométries simples",
         "number": "2.3",
-        "description": "Pour chaque cellule dans une grille, on choisit une orientation en incréments de 45°, puis on dessine une ligne. Le résultat est un réseau complexe.",
+        "description": "Pour chaque cellule dans une grille, on choisit une orientation en incréments de 45°, puis on dessine une ligne, produisant un réseau complexe de symboles.<br>Cliquez pour regénérer.",
         "slug": "lignes"
     },
     {

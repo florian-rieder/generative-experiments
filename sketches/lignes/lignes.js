@@ -1,20 +1,30 @@
-const rows = 16;
-const columns = 16;
-const margin = 50;
-const weightFactor = 1/4;
-let doneWorking = false
+const rows = 32;
+const columns = 32;
+const marginPercent = 0.1;
+const minWeight = 1 / 4;
+const maxWeight = 4;
 
+let doneWorking = false;
+let margin = 0;
 let i = 0;
 let j = 0;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(255);
-    frameRate(16);
+    frameRate(60);
     strokeCap(PROJECT);
-    strokeWeight(weightFactor);
+    initialize();
+}
 
+function initialize() {
+    i = 0;
+    j = 0;
+    doneWorking = false;
+    margin = min(width, height) * marginPercent;
     cellSize = getCellSize();
+    strokeWeight(minWeight);
+    background(255);
+    loop();
 }
 
 function draw() {
@@ -22,19 +32,27 @@ function draw() {
         noLoop();
         return;
     }
-    translate(width / 2 - (cellSize * columns) / 2, 0)
+
+    // Set the origin to the top left corner of the grid
+    translate(
+        width / 2 - margin/2 - (cellSize * columns) / 2,
+        height / 2 - margin/2 - (cellSize * rows) / 2
+    )
+
     drawCell(i, j);
 
     i++;
     if (i >= rows) {
         j++;
         i = 0;
-        strokeWeight((j + 1) * weightFactor);
+        strokeWeight(map(j, 0, rows, minWeight, maxWeight));
         if (j >= columns) {
             noLoop();
             doneWorking = true;
         }
     }
+
+    //strokeWeight(map(j + i, 0, rows+columns, minWeight, maxWeight));
 }
 
 function drawCell(x, y) {
@@ -58,16 +76,15 @@ function drawCell(x, y) {
 }
 
 function getCellSize() {
-    return min((width - margin) / columns, (height - margin) / rows - 1);
+    return min((width - margin) / columns, (height - margin) / rows);
 }
+
+function mousePressed() {
+    initialize();
+}
+
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    // reset display and data
-    background(255);
-    doneWorking = false;
-    i = 0;
-    j = 0;
-    cellSize = getCellSize();
-    strokeWeight(weightFactor);
+    initialize();
 }
