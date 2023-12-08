@@ -45,14 +45,18 @@ function draw() {
     if (i >= rows) {
         j++;
         i = 0;
-        strokeWeight(map(j, 0, rows, minWeight, maxWeight));
         if (j >= columns) {
             noLoop();
             doneWorking = true;
         }
     }
 
-    //strokeWeight(map(j + i, 0, rows+columns, minWeight, maxWeight));
+    // Weights mapping
+    strokeWeight(map(i, 0, columns, minWeight, maxWeight));
+    //strokeWeight(map(j, 0, rows, minWeight, maxWeight));
+    //strokeWeight(map(i + j, 0, rows + columns, minWeight, maxWeight));
+    //strokeWeight(map(i * j + i, 0, rows * columns, minWeight, maxWeight));
+    //strokeWeight(map(i * j + j, 0, rows * columns, minWeight, maxWeight));
 }
 
 function drawCell(x, y) {
