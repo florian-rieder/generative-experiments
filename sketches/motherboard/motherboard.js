@@ -7,12 +7,12 @@ let doneWorking = false;
 
 function setup() {
     const size = min(windowWidth, windowHeight);
-    createCanvas(size, size);
+    createCanvas(windowWidth, windowHeight);
 
     background(255);
     stroke(255);
     colorMode(HSL);
-    frameRate(1);
+    frameRate(4);
 
     baseHue = random(0, 360);
 
@@ -36,17 +36,21 @@ function initialize() {
 }
 
 function draw() {
-    if (doneWorking) return;
+    if (doneWorking){
+        noLoop();
+        return;
+    }
 
     /* Framerate stuff */
-    if (frameCount / 2 <= 60) {
-        frameRate(frameCount / 2);
+    if (frameCount / 2 <= 59) {
+        frameRate(frameCount + 1);
     }
 
     let additionalRectangles = frameCount / 2 - 60 > 1 ? frameCount / 2 - 60 : 1;
     if (additionalRectangles >= 10) {
         additionalRectangles = 10;
     }
+
     /* Adding rectangles */
     for (let i = 0; i < additionalRectangles; i++) {
         addRectangle();
