@@ -9,7 +9,6 @@ body {
     overflow: hidden;
 }
 
-/* .p5Canvas {
-    margin-left: auto;
-    margin-right: auto;
-} */
+.interactable {
+    cursor: pointer;
+}

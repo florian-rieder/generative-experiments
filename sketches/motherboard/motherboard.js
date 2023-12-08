@@ -3,6 +3,8 @@ const hueConstraint = 30; // only take colors from a 90 degree arc on the hue ci
 const maxRectSize = 10;
 const missChance = 15 / 100;
 
+let doneWorking = false;
+
 function setup() {
     const size = min(windowWidth, windowHeight);
     createCanvas(size, size);
@@ -23,6 +25,7 @@ function setup() {
 }
 
 function initialize() {
+    doneWorking = false;
     cellSizeX = (width - 2 * margin) / columns;
     cellSizeY = (height - 2 * margin) / rows;
     internalMargin = min(cellSizeY, cellSizeX) / 2;
@@ -33,10 +36,13 @@ function initialize() {
 }
 
 function draw() {
+    if (doneWorking) return;
+
     /* Framerate stuff */
     if (frameCount / 2 <= 60) {
         frameRate(frameCount / 2);
     }
+
     let additionalRectangles = frameCount / 2 - 60 > 1 ? frameCount / 2 - 60 : 1;
     if (additionalRectangles >= 10) {
         additionalRectangles = 10;
@@ -47,19 +53,10 @@ function draw() {
 
         if (countFilledCells(filledCells) >= rows * columns) {
             noLoop();
-            //writeTitle();
+            doneWorking = true;
             return;
         }
     }
-}
-
-function writeTitle() {
-    textFont("Courier New");
-    textSize(16);
-    textAlign(RIGHT);
-    fill(0, 0, 50);
-    const serial = "P-" + rows + "-" + columns + "-" + round(random(0, 9)) + round(random(0, 9)) + round(random(0, 9)) + "-" + round(random(0, 9));
-    text(serial, width - margin - internalMargin / 2, height - margin / 2 + 8 - internalMargin / 2);
 }
 
 function addRectangle() {
@@ -90,7 +87,6 @@ function addRectangle() {
         }
     }
 }
-
 
 function maximalRectangle(matrix, value = 1) {
     /* An algorithm to find the maximal rectangle in a binary matrix.
@@ -167,7 +163,8 @@ function maximalRectangle(matrix, value = 1) {
 }
 
 function countFilledCells(grid) {
-    // Prompt: Could you help me with creating a function that goes through a 2D array of booleans and returns how many are true ?
+    // Prompt: Could you help me with creating a function that goes through a
+    // 2D array of booleans and returns how many are true ?
     return grid.flat().reduce((sum, val) => sum + val, 0);
 }
 

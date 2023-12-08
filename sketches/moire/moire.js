@@ -1,24 +1,27 @@
-const spacing = 8; // px
 const numLayers = 6;
 const maxAngleIncrement = 0.001;
+const minSpacing = 4;
+const maxSpacing = 16;
 
 let angles;
 let rotationSpeeds;
 let bufferSize;
+let spacings;
 
 function setup() {
 
     createCanvas(windowWidth, windowHeight);
     bufferSize = getBufferSize();
 
-    angles = new Array(numLayers).fill().map(() => random(0, PI));
-    rotationSpeeds = new Array(numLayers).fill().map(() => random(0.0001, maxAngleIncrement));
     // we use buffers so as to not need to recalculate the layers, which 
     // don't change frame to frame, saving a lot on performance.
     buffers = new Array(numLayers).fill().map(() => createGraphics(bufferSize.width, bufferSize.height));
+    angles = new Array(numLayers).fill().map(() => random(0, PI));
+    rotationSpeeds = new Array(numLayers).fill().map(() => random(0.0001, maxAngleIncrement));
+    spacings = new Array(numLayers).fill().map(() => round(random(minSpacing, maxSpacing)))
 
     for (let i = 0; i < numLayers; i++) {
-        fillBuffer(buffers[i]);
+        fillBuffer(i);
     }
 }
 
@@ -37,10 +40,11 @@ function draw() {
     }
 }
 
-function fillBuffer(buffer) {
+function fillBuffer(bufferIndex) {
+    buffer = buffers[bufferIndex]
     // Create the pattern on one layer
     buffer.stroke(255);
-    for (let x = 0; x < bufferSize.width; x += spacing) {
+    for (let x = 0; x < bufferSize.width; x += spacings[bufferIndex]) {
         buffer.line(x, 0, x, bufferSize.height);
     }
 }
@@ -62,6 +66,6 @@ function windowResized() {
         buffers[i].height = bufferSize.height;
         buffers[i].pixelDensity(pixelDensity()); // prevents density from changing
         buffers[i].background(0, 0, 0, 0);
-        fillBuffer(buffers[i]);
+        fillBuffer(i);
     }
 }

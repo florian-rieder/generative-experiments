@@ -15,22 +15,6 @@ let randomStep = Math.random() > 0.5;
 let resetAngle = Math.random() > 0.5;
 let keepWeights = false;
 
-// OPC.slider('offsetX', 0, -512, 0, 1);
-// OPC.slider('angleIncrement', 0.015, 0.001, 0.500, 0.001);
-// OPC.slider('noiseIncrement', 0.015, 0.000, 0.030, 0.001);
-// OPC.slider('amplitudeReductionFactor', 1.00, 0.50, 1.00, 0.01);
-// OPC.slider('thicknessReductionFactor', 0.70, 0.50, 1.00, 0.01);
-// OPC.slider('numFrequencies', 4, 1, 32, 1);
-// OPC.slider('numColors', 4, 1, 64, 1);
-// OPC.slider('maxThickness', 100, 10, 1024, 1);
-// OPC.slider('maxAmplitude', 100, 10, 1024, 1);
-// OPC.slider('baseHue', Math.round(Math.random() * 360), 0, 360, 1);
-// OPC.toggle('randomStep', false);
-// OPC.toggle('resetAngle', false);
-// OPC.toggle('keepWeights', false);
-
-// OPC.button('generateButton', 'Regenerate');
-
 const titleSize = margin / 4;
 let weights = new Array();
 

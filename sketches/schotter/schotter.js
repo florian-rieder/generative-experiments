@@ -47,7 +47,6 @@ function mousePressed() {
     drawSchotter();
 }
 
-
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     drawSchotter();

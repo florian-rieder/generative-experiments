@@ -76,6 +76,13 @@
   display: flex;
   justify-content: space-between;
 }
+.slide-details br {
+  /* Change height of br: see https://stackoverflow.com/a/28310011/10914628 */
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}
 .slide-details h3 {
   margin: 0;
   color: rgb(73, 73, 73);
