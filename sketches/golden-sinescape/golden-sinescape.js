@@ -4,9 +4,13 @@ const freq = 9; // odd numbers produce more interesting results.
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(255);
     frameRate(60);
 
+    initialize();
+}
+
+function initialize() {
+    background(255);
     currentX = 20;
     currentY = -d;
     angle = 0;
@@ -45,4 +49,9 @@ function drawSinescape() {
 function goldenRect(x, y, rectWidth) {
     let rectHeight = rectWidth * PHI;
     rect(x, y, x + rectWidth, y + rectHeight);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    initialize();
 }

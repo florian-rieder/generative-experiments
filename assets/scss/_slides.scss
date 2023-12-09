@@ -118,24 +118,43 @@
     }
 }
 
-@media screen and (min-width: $xxl) {
+@media screen and (min-width: $xxxl) and (max-width: $x4k) {
     .slide-details {
-        padding: 1em;
-        font-size: 16pt;
-
+        font-size: 30pt;
         .slide-title {
             h2 {
-                font-size: 20pt;
+                font-size: 60pt;
             }
 
             legend {
-                margin-top: 2px;
-                font-size: 8pt;
-
-                .legend-number-header {
-                    margin-bottom: -2px;
-                }
+                margin-top: 10px;
+                font-size: 20pt;
             }
+        }
+
+        h3 {
+            font-size: 38pt;
+        }
+    }
+}
+
+@media screen and (min-width: $x4k) {
+    .slide-details {
+        font-size: 42pt;
+
+        .slide-title {
+            h2 {
+                font-size: 80pt;
+            }
+
+            legend {
+                margin-top: 14px;
+                font-size: 26pt;
+            }
+        }
+
+        h3 {
+            font-size: 50pt;
         }
     }
 }

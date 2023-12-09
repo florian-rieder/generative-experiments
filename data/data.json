@@ -34,7 +34,7 @@
         "title": "Moiré",
         "serie": "Géométries simples",
         "number": "2.2",
-        "description": "Cette expérience vise à reproduire l'effet de Moiré, en superposant plusieurs grilles en rotation.",
+        "description": "Cette expérience vise à reproduire l'effet de Moiré, en superposant plusieurs grilles en rotation.<br>Cliquer pour regénérer les couleurs.",
         "slug": "moire"
     },
     {

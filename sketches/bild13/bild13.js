@@ -10,9 +10,10 @@ let baseRadius = 1000;
 // Margin around the canvas
 let margin = 50;
 
-// Setup function, runs once at the beginning
+
 function setup() {
-    createCanvas(windowWidth / PHI, windowHeight); // Create a canvas with dimensions
+    // Create a canvas that is a golden rectangle
+    createCanvas(windowWidth / PHI, windowHeight);
     noFill(); // Don't fill shapes
     strokeWeight(0.5); // Set stroke weight for lines
     translate(width / 2, height / 2); // Center the origin
@@ -20,7 +21,6 @@ function setup() {
     drawBild(); // Call the custom drawing function
 }
 
-// Function to draw the pattern
 function drawBild() {
     background("white"); // Set background color
 

@@ -10,9 +10,9 @@
     /* background: rgb(2,0,36);
     background: linear-gradient(250deg, rgba(2,0,36,1) 0%, rgba(39,39,77,1) 35%, rgba(36,74,82,1) 100%); */
     background: rgb(28, 41, 107);
-    background: radial-gradient(circle, rgba(28, 41, 107, 1) 0%, rgba(126, 43, 60, 1) 100%);
+    background: radial-gradient(circle, rgb(98, 98, 98) 0%, rgb(53, 53, 53) 100%);
     background-size: 400% 400%;
-    animation: gradient 60s ease infinite;
+    animation: gradient 120s ease infinite;
     color: white;
 
     h1 {
@@ -77,6 +77,50 @@
         .hero-content p {
             width: 100%;
             padding: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: $xxxl) and (max-width: $x4k) {
+    #hero {
+        padding: 5em;
+
+        h1 {
+            font-size: 80pt;
+        }
+
+        #by {
+            font-size: 32pt;
+        }
+
+        .hero-content p {
+            width: 100%;
+            font-size: 40pt;
+            margin-left: 15%;
+            margin-right: 15%;
+            font-weight: 200;
+        }
+    }
+}
+
+@media screen and (min-width: $x4k) {
+    #hero {
+        padding: 5em;
+
+        h1 {
+            font-size: 100pt;
+        }
+
+        #by {
+            font-size: 42pt;
+        }
+
+        .hero-content p {
+            width: 100%;
+            font-size: 50pt;
+            margin-left: 15%;
+            margin-right: 15%;
+            font-weight: 200;
         }
     }
 }

@@ -2,7 +2,7 @@ const rows = 32;
 const columns = 32;
 const marginPercent = 0.1;
 const minWeight = 1 / 4;
-const maxWeight = 4;
+const maxWeight = 3;
 
 let doneWorking = false;
 let margin = 0;
@@ -35,8 +35,8 @@ function draw() {
 
     // Set the origin to the top left corner of the grid
     translate(
-        width / 2 - margin/2 - (cellSize * columns) / 2,
-        height / 2 - margin/2 - (cellSize * rows) / 2
+        width / 2 - margin / 2 - (cellSize * columns) / 2,
+        height / 2 - margin / 2 - (cellSize * rows) / 2
     )
 
     drawCell(i, j);

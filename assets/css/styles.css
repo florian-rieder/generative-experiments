@@ -125,20 +125,34 @@
     margin-bottom: -2px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
   .slide-details {
-    padding: 1em;
-    font-size: 16pt;
+    font-size: 30pt;
   }
   .slide-details .slide-title h2 {
-    font-size: 20pt;
+    font-size: 60pt;
   }
   .slide-details .slide-title legend {
-    margin-top: 2px;
-    font-size: 8pt;
+    margin-top: 10px;
+    font-size: 20pt;
   }
-  .slide-details .slide-title legend .legend-number-header {
-    margin-bottom: -2px;
+  .slide-details h3 {
+    font-size: 38pt;
+  }
+}
+@media screen and (min-width: 3840px) {
+  .slide-details {
+    font-size: 42pt;
+  }
+  .slide-details .slide-title h2 {
+    font-size: 80pt;
+  }
+  .slide-details .slide-title legend {
+    margin-top: 14px;
+    font-size: 26pt;
+  }
+  .slide-details h3 {
+    font-size: 50pt;
   }
 }
 #hero {
@@ -153,9 +167,9 @@
   /* background: rgb(2,0,36);
   background: linear-gradient(250deg, rgba(2,0,36,1) 0%, rgba(39,39,77,1) 35%, rgba(36,74,82,1) 100%); */
   background: rgb(28, 41, 107);
-  background: radial-gradient(circle, rgb(28, 41, 107) 0%, rgb(126, 43, 60) 100%);
+  background: radial-gradient(circle, rgb(98, 98, 98) 0%, rgb(53, 53, 53) 100%);
   background-size: 400% 400%;
-  animation: gradient 60s ease infinite;
+  animation: gradient 120s ease infinite;
   color: white;
 }
 #hero h1 {
@@ -212,6 +226,42 @@
   #hero .hero-content p {
     width: 100%;
     padding: 10px;
+  }
+}
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
+  #hero {
+    padding: 5em;
+  }
+  #hero h1 {
+    font-size: 80pt;
+  }
+  #hero #by {
+    font-size: 32pt;
+  }
+  #hero .hero-content p {
+    width: 100%;
+    font-size: 40pt;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 200;
+  }
+}
+@media screen and (min-width: 3840px) {
+  #hero {
+    padding: 5em;
+  }
+  #hero h1 {
+    font-size: 100pt;
+  }
+  #hero #by {
+    font-size: 42pt;
+  }
+  #hero .hero-content p {
+    width: 100%;
+    font-size: 50pt;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 200;
   }
 }
 .spinner {

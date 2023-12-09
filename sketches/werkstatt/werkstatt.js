@@ -1,7 +1,10 @@
-let numColumns = 9;
-let numRows = 13;
+const numColumns = 9;
+const numRows = 13;
+const marginPercent = 0.08; // margin of 8% on each side
+
+let margin;
 let cellSize;
-let margin = 20;
+
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -17,7 +20,7 @@ function mousePressed() {
 }
 
 function drawGrid() {
-    margin = height * 8 / 100; // margin of 8% on each side
+    margin = height * marginPercent;
     background(255, 32, 32); // Set the background to a bloody red
     // Calculate the size of each cell based on the available space within the canvas
     cellSize = min((width - margin * 2) / numColumns, (height - margin * 2) / numRows);

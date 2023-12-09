@@ -2,6 +2,7 @@ const columns = 12;
 const rows = 22;
 const translationMultiplier = 1 / 2;
 const rotationMultiplier = 1 / 100;
+const marginPercent = 0.08; // margin of 8% on each side
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -14,7 +15,7 @@ function drawSchotter() {
     background(255);
 
     // compute square size based on canvas size and margin
-    let margin = height * 8 / 100; // margin of 8% on each side
+    let margin = height * marginPercent;
     squareSize = (height - margin * 2) / rows;
 
     push()
