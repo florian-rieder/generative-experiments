@@ -1,11 +1,6 @@
 #hero {
     height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4em;
+    padding: 0;
     opacity: 1;
     /* background: rgb(2,0,36);
     background: linear-gradient(250deg, rgba(2,0,36,1) 0%, rgba(39,39,77,1) 35%, rgba(36,74,82,1) 100%); */
@@ -15,27 +10,54 @@
     animation: gradient 120s ease infinite;
     color: white;
 
-    h1 {
-        font-size: 40pt;
-        text-align: center;
-        font-family: code_bold;
-        letter-spacing: 4px;
-        /* offset-x | offset-y | blur-radius | color */
-        text-shadow: 0px 5px 5px black;
-    }
-
     .hero-content {
+        width: 50%;
+        height: 100%;
         display: flex;
-        justify-content: center;
-        p {
-            font-size: 18pt;
-            width: 60%;
-            text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 5% 0 5% 5%;
+
+        h1 {
+            font-size: 73pt;
+            font-weight: 10;
+            text-align: left;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            // offset-x | offset-y | blur-radius | color
+            text-shadow: 0px 5px 5px black;
+            margin: 0;
+            height: 50%;
+            box-sizing: border-box;
+        }
+
+        .hero-description {
+
+            #by {
+                font-weight: 300;
+                font-size: 16pt;
+                text-shadow: 0px 3px 3px black;
+            }
+
+            p {
+                font-size: 14pt;
+                text-shadow: 0px 3px 3px black;
+            }
         }
     }
 
-    #by {
-        font-weight: 400;
+    // Mouse selection colors
+    ::-moz-selection {
+        color: blacK;
+        background: white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        color: blacK;
+        background: white;
+        text-shadow: none;
     }
 }
 
@@ -51,76 +73,100 @@
     }
 }
 
-@media screen and (max-width: $md) and (min-width: $sm) {
-    #hero {
-        padding: 1em;
-
+@media screen and (min-width: $x4k) {
+    #hero .hero-content {
         h1 {
-            font-size: 36pt;
-        }
-
-        .hero-content p {
-            width: 80%;
-            font-size: 16pt;
-        }
-    }
-}
-
-@media screen and (max-width: $sm) {
-    #hero {
-        padding: 1em;
-
-        h1 {
-            font-size: 24pt;
-        }
-
-        .hero-content p {
-            width: 100%;
-            padding: 10px;
-        }
-    }
-}
-
-@media screen and (min-width: $xxxl) and (max-width: $x4k) {
-    #hero {
-        padding: 5em;
-
-        h1 {
-            font-size: 80pt;
+            font-size: 152pt;
         }
 
         #by {
-            font-size: 32pt;
+            font-size: 50pt;
         }
 
-        .hero-content p {
-            width: 100%;
-            font-size: 40pt;
-            margin-left: 15%;
-            margin-right: 15%;
-            font-weight: 200;
+        p {
+            font-size: 42pt;
         }
     }
 }
 
-@media screen and (min-width: $x4k) {
-    #hero {
-        padding: 5em;
-
+@media screen and (min-width: $xxxl) and (max-width: calc($x4k - 1px)) {
+    #hero .hero-content {
         h1 {
             font-size: 100pt;
         }
 
         #by {
-            font-size: 42pt;
+            font-size: 34pt;
         }
 
-        .hero-content p {
-            width: 100%;
-            font-size: 50pt;
-            margin-left: 15%;
-            margin-right: 15%;
-            font-weight: 200;
+        p {
+            font-size: 28pt;
+        }
+    }
+}
+
+@media screen and (min-width: $xl) and (max-width: calc($xxl - 1px)) {
+    #hero .hero-content {
+        h1 {
+            font-size: 48pt;
+        }
+
+        #by {
+            font-size: 14pt;
+        }
+
+        p {
+            font-size: 12pt;
+        }
+    }
+}
+
+
+@media screen and (min-width: $md) and (max-width: calc($xl - 1px)) {
+    #hero .hero-content {
+        width: 100%;
+        padding: 5%;
+
+        h1 {
+            font-size: 30pt;
+        }
+
+        #by {
+            font-size: 14pt;
+        }
+
+        p {
+            font-size: 14pt;
+        }
+    }
+}
+
+@media screen and (min-width: $sm) and (max-width: calc($md - 1px)) {
+    #hero .hero-content {
+        width: 100%;
+        padding: 5%;
+
+        h1 {
+            font-size: 36pt;
+        }
+
+        p {
+            font-size: 18pt;
+        }
+    }
+}
+
+@media screen and (max-width: calc($sm - 1px)) {
+    #hero .hero-content {
+        width: 100%;
+        padding: 5%;
+
+        h1 {
+            font-size: 26pt;
+        }
+
+        p {
+            font-size: 18pt;
         }
     }
 }

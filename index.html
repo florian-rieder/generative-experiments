@@ -20,11 +20,16 @@
 <body>
     <div class="scroll-container" role="main">
         <div id="hero" class="scroll-section" role="banner">
-            <h1>Experiments in Generative Art</h1>
-            <div id="by">Par Florian Rieder</div>
             <div class="hero-content">
-                <p>Ce site présente trois séries d'œuvres d'art génératives, réalisées dans le cadre du cours
-                    "Art Génératif" donné par Isaac Pante (SLI, UNIL) durant le semestre de printemps 2023.</p>
+                <h1>
+                    Experiments in<br>
+                    Generative Art
+                </h1>
+                <div class="hero-description">
+                    <div id="by">Par Florian Rieder</div>
+                    <p>Ce site présente trois séries d'œuvres d'art génératives, réalisées dans le cadre du cours
+                        "Art Génératif" donné par Isaac Pante (SLI, UNIL) durant le semestre de printemps 2023.</p>
+                </div>
             </div>
         </div>
 
@@ -52,7 +57,7 @@
                         aria-label="Open the Schotter sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/schotter/schotter.js"
-                        target="_blank" aria-label="Open the source code for the Schotter sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Schotter">Source code</a>
                     
                     <a href="http://dada.compart-bremen.de/item/artwork/1" target="_blank" aria-label="Open original of Schotter">Open
                         original</a>
@@ -78,13 +83,13 @@
                 </div>
                 <h3>Hommage à Georg Nees</h3>
 
-                <p>Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont aléatoirement tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.<br>Cliquez pour regénérer.</p>
+                <p>Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.<br>Cliquez pour regénérer.</p>
                 <div class="slide-links">
                     <a href="sketches/werkstatt/index.html" target="_blank"
                         aria-label="Open the Untitled (Werkstatt Edition Kroll) sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/werkstatt/werkstatt.js"
-                        target="_blank" aria-label="Open the source code for the Untitled (Werkstatt Edition Kroll) sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Untitled (Werkstatt Edition Kroll)">Source code</a>
                     
                     <a href="https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/" target="_blank" aria-label="Open original of Untitled (Werkstatt Edition Kroll)">Open
                         original</a>
@@ -116,7 +121,7 @@
                         aria-label="Open the Untitled (Bild 13) sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/bild13/bild13.js"
-                        target="_blank" aria-label="Open the source code for the Untitled (Bild 13) sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Untitled (Bild 13)">Source code</a>
                     
                     <a href="http://dada.compart-bremen.de/item/artwork/1456" target="_blank" aria-label="Open original of Untitled (Bild 13)">Open
                         original</a>
@@ -142,13 +147,13 @@
                 </div>
                 <h3>Géométries simples</h3>
 
-                <p>Essentiellement un exercice en "rectangle packing" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.</p>
+                <p>Exercice en "rectangle packing" dans une grille modulaire, qui rappelle un peu Mondrian. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.</p>
                 <div class="slide-links">
                     <a href="sketches/motherboard/index.html" target="_blank"
                         aria-label="Open the Motherboard sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/motherboard/motherboard.js"
-                        target="_blank" aria-label="Open the source code for the Motherboard sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Motherboard">Source code</a>
                     
                 </div>
             </div>
@@ -171,13 +176,13 @@
                 </div>
                 <h3>Géométries simples</h3>
 
-                <p>Cette expérience vise à reproduire l'effet de Moiré, en superposant plusieurs grilles en rotation.<br>Cliquer pour regénérer les couleurs.</p>
+                <p>Cette expérience vise à reproduire l'effet de Moiré en superposant plusieurs grilles en rotation, créant une série de motifs complexes.<br>Cliquer pour regénérer les couleurs.</p>
                 <div class="slide-links">
                     <a href="sketches/moire/index.html" target="_blank"
                         aria-label="Open the Moiré sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/moire/moire.js"
-                        target="_blank" aria-label="Open the source code for the Moiré sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Moiré">Source code</a>
                     
                 </div>
             </div>
@@ -200,13 +205,13 @@
                 </div>
                 <h3>Géométries simples</h3>
 
-                <p>Pour chaque cellule dans une grille, on choisit une orientation en incréments de 45°, puis on dessine une ligne, produisant un réseau complexe de symboles.<br>Cliquez pour regénérer.</p>
+                <p>Chaque cellule d'une grille est métamorphosée par une orientation choisie par incréments de 45°, donnant naissance à une ligne qui s'entrelace avec d'autres pour former un réseau complexe de symboles où l'ordre se marie au chaos.<br>Cliquez pour regénérer.</p>
                 <div class="slide-links">
                     <a href="sketches/lignes/index.html" target="_blank"
                         aria-label="Open the Lignes sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/lignes/lignes.js"
-                        target="_blank" aria-label="Open the source code for the Lignes sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Lignes">Source code</a>
                     
                 </div>
             </div>
@@ -229,13 +234,13 @@
                 </div>
                 <h3>Sinescapes</h3>
 
-                <p>Paysage ondulé animé</p>
+                <p>Cette oeuvre se déploie au travers d'une toile infinie de lignes sinueuses, évoquant une topographie imaginaire en perpétuelle évolution. Les oscillations sont le résultat d'un jeu subtile entre des composantes harmoniques sinusoïdales générées aléatoirement et des éléments de bruit de Perlin.</p>
                 <div class="slide-links">
                     <a href="sketches/waves-sinescape/index.html" target="_blank"
                         aria-label="Open the Waves Sinescape sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/waves-sinescape/waves-sinescape.js"
-                        target="_blank" aria-label="Open the source code for the Waves Sinescape sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Waves Sinescape">Source code</a>
                     
                 </div>
             </div>
@@ -264,7 +269,7 @@
                         aria-label="Open the Golden Sinescape sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/golden-sinescape/golden-sinescape.js"
-                        target="_blank" aria-label="Open the source code for the Golden Sinescape sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Golden Sinescape">Source code</a>
                     
                 </div>
             </div>
@@ -293,7 +298,7 @@
                         aria-label="Open the Générateur de filaments sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments-generator/filaments-generator.js"
-                        target="_blank" aria-label="Open the source code for the Générateur de filaments sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Générateur de filaments">Source code</a>
                     
                 </div>
             </div>
@@ -322,7 +327,7 @@
                         aria-label="Open the Filaments sketch in full">Open in
                         full</a>
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/filaments/filaments.js"
-                        target="_blank" aria-label="Open the source code for the Filaments sketch">Source code</a>
+                        target="_blank" aria-label="Open the source code for Filaments">Source code</a>
                     
                 </div>
             </div>

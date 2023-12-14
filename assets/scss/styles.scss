@@ -1,5 +1,4 @@
 @import "breakpoints";
-@import "fonts";
 @import "scrolling";
 @import "slides";
 @import "hero";
@@ -30,9 +29,13 @@ p {
     letter-spacing: -0.25px;
 }
 
-/* Mouse selection colors*/
+#favicon {
+    display: none;
+}
+
+// Mouse selection colors
 ::-moz-selection {
-    /* Code for Firefox */
+    // Code for Firefox
     color: white;
     background: black;
 }

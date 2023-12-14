@@ -11,7 +11,7 @@
         "title": "Untitled (Werkstatt Edition Kroll)",
         "serie": "Hommage à Georg Nees",
         "number": "1.2",
-        "description": "Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont aléatoirement tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.<br>Cliquez pour regénérer.",
+        "description": "Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.<br>Cliquez pour regénérer.",
         "slug": "werkstatt",
         "original": "https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/"
     },
@@ -27,28 +27,28 @@
         "title": "Motherboard",
         "serie": "Géométries simples",
         "number": "2.1",
-        "description": "Essentiellement un exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian, mais surtout la structure d'une carte mère. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
+        "description": "Exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
         "slug": "motherboard"
     },
     {
         "title": "Moiré",
         "serie": "Géométries simples",
         "number": "2.2",
-        "description": "Cette expérience vise à reproduire l'effet de Moiré, en superposant plusieurs grilles en rotation.<br>Cliquer pour regénérer les couleurs.",
+        "description": "Cette expérience vise à reproduire l'effet de Moiré en superposant plusieurs grilles en rotation, créant une série de motifs complexes.<br>Cliquer pour regénérer les couleurs.",
         "slug": "moire"
     },
     {
         "title": "Lignes",
         "serie": "Géométries simples",
         "number": "2.3",
-        "description": "Pour chaque cellule dans une grille, on choisit une orientation en incréments de 45°, puis on dessine une ligne, produisant un réseau complexe de symboles.<br>Cliquez pour regénérer.",
+        "description": "Chaque cellule d'une grille est métamorphosée par une orientation choisie par incréments de 45°, donnant naissance à une ligne qui s'entrelace avec d'autres pour former un réseau complexe de symboles où l'ordre se marie au chaos.<br>Cliquez pour regénérer.",
         "slug": "lignes"
     },
     {
         "title": "Waves Sinescape",
         "serie": "Sinescapes",
         "number": "3.1",
-        "description": "Paysage ondulé animé",
+        "description": "Cette oeuvre se déploie au travers d'une toile infinie de lignes sinueuses, évoquant une topographie imaginaire en perpétuelle évolution. Les oscillations sont le résultat d'un jeu subtile entre des composantes harmoniques sinusoïdales générées aléatoirement et des éléments de bruit de Perlin.",
         "slug": "waves-sinescape"
     },
     {
