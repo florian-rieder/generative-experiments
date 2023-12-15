@@ -4,12 +4,11 @@ const amplitude = 100;
 const noiseAmplitude = 50;
 const step = 20;
 const hStep = 2;
+const numWeights = 3;
 let speed = 1;
 
-const weights = generateWeights(3);
-
-// Cache for noise values
-const noiseCache = [];
+let weights;
+let noiseCache; // Cache for precomputed noise values
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -20,16 +19,8 @@ function setup() {
 
     currentTime = 0;
 
-    // Pre-compute noise values and store them in the cache
-    let noiseOffset = createVector(0, 0);
-    for (let y = 0; y < height; y += step) {
-        for (let x = 0; x < width; x++) {
-            noiseCache.push(noise(noiseOffset.x, noiseOffset.y));
-            noiseOffset.x += noiseIncrement;
-        }
-        noiseOffset.y += noiseIncrement * 10;
-        noiseOffset.x = 0;
-    }
+    weights = generateWeights(numWeights);
+    computeNoise();
 }
 
 function draw() {
@@ -66,6 +57,20 @@ function harmonicSine(t, weights) {
     return sum;
 }
 
+function computeNoise() {
+    // Pre-compute noise values and store them in the cache
+    noiseCache = [];
+    let noiseOffset = createVector(0, 0);
+    for (let y = 0; y < height; y += step) {
+        for (let x = 0; x < width; x++) {
+            noiseCache.push(noise(noiseOffset.x, noiseOffset.y));
+            noiseOffset.x += noiseIncrement;
+        }
+        noiseOffset.y += noiseIncrement * 10;
+        noiseOffset.x = 0;
+    }
+}
+
 /* Prompt: *My naive implementation* The current implementation of the generateWeights doesn't really satisfy me.
  * Let me explain: I'm using it to generate random harmonic sines, and when I take a large amount of 
  * weights, the first random number as a much higher chance to be a high percentage, making it so
@@ -93,4 +98,6 @@ function generateWeights(numWeights) {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+    computeNoise();
+
 }
