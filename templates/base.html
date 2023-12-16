@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        {% for item in item_list %}
+        {%- for item in item_list %}
         <div class="scroll-section pure-g">
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
@@ -51,23 +51,24 @@
                     </legend>
                 </div>
                 <h3>{{item.serie}}</h3>
-
                 <p>{{item.description|safe}}</p>
                 <div class="slide-links">
                     <a href="sketches/{{item.slug}}" target="_blank"
-                        aria-label="Open the {{item.title}} sketch in full">Open in
-                        full</a>
+                        aria-label="Open the {{item.title}} sketch in full">Open in full</a>
+                    {% if item.mosaic -%}
+                    <a href="sketches/{{item.slug}}/mosaic" target="_blank"
+                        aria-label="Open mosaic of {{item.title}}">Open mosaic</a>
+                    {% endif -%}
                     <a href="https://github.com/florian-rieder/generative-experiments/blob/main/sketches/{{item.slug}}/{{item.slug}}.js"
                         target="_blank" aria-label="Open the source code for {{item.title}}">Source code</a>
-                    {% if item.original %}
+                    {%- if item.original %}
                     <a href="{{item.original}}" target="_blank" aria-label="Open original of {{item.title}}">Open
                         original</a>
-                    {% endif %}
+                    {%- endif %}
                 </div>
             </div>
         </div>
-        {% endfor %}
-
+        {%- endfor %}
     </div>
 </body>
 

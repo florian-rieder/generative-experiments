@@ -63,7 +63,8 @@
         "serie": "Sinescapes",
         "number": "3.3",
         "description": "Probablement mon oeuvre la plus aboutie, ce générateur de filaments dispose de 12 paramètres, choisis au hasard à chaque génération, qui produisent une grande variété de formes et de textures.<br>Cliquez pour regénérer.",
-        "slug": "filaments-generator"
+        "slug": "filaments-generator",
+        "mosaic": true
     },
     {
         "title": "Filaments",
