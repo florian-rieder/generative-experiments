@@ -30,7 +30,7 @@
 <body>
     <script>
         /**
-         * Create a mosaic of a given p5.js sketch
+         * Create a mosaic of a given p5.js sketch.
          * Created using ChatGPT-3.5-turbo:
          * https://chat.openai.com/share/a88e18c4-7a2f-467f-9933-53df1d5faf3e
          */
@@ -62,12 +62,12 @@
             return window.innerHeight + window.scrollY >= document.body.offsetHeight;
         }
 
-        const scriptUrl = '/sketches/filaments-generator/index.html';
+        const scriptUrl = '../index.html';
 
         // Create a 4 by 4 grid of iframes initially
-        const rows = 2;
         const cols = 2;
         const size = Math.floor((window.innerWidth - getScrollBarWidth()) / cols);
+        const rows = Math.ceil(window.innerHeight / size);
 
         for (let i = 0; i < rows; i++) {
             for (let j = 0; j < cols; j++) {
