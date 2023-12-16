@@ -4,16 +4,13 @@ const margin = 0;
 let offsetX = 0;
 let angleIncrement = 0.015;
 let noiseIncrement = 0.015;
-let amplitudeReductionFactor = Math.random() * 0.5 + 0.5;
-let thicknessReductionFactor = Math.random() * 0.2 + 0.7;
-let numFrequencies = Math.round(Math.random() * 8);
-let numColors = Math.round(Math.random() * 6 + 2);
-let maxThickness = Math.round(Math.random() * (200 - 10) + 10);
-let maxAmplitude = Math.round(Math.random() * (200 - 10) + 10);
-let baseHue = Math.round(Math.random() * 360);
-let randomStep = Math.random() > 0.5;
-let resetAngle = Math.random() > 0.5;
-let keepWeights = false;
+let keepWeights = true;
+let maxThickness,
+    maxAmplitude,
+    baseHue,
+    randomStep,
+    resetAngle;
+
 
 const titleSize = margin / 4;
 let weights = new Array();
@@ -32,12 +29,12 @@ function mousePressed() {
 }
 
 function generate() {
-    amplitudeReductionFactor = Math.random() * 0.5 + 0.5;
-    thicknessReductionFactor = Math.random() * 0.5 + 0.49;
+    amplitudeReductionFactor = Math.random() * 0.4 + 0.6;
+    thicknessReductionFactor = Math.random() * 0.2 + 0.79;
     numFrequencies = Math.round(Math.random() * 8);
     numColors = Math.round(Math.random() * 8 + 8);
-    maxThickness = Math.round(Math.random() * (200 - 10) + 10);
-    maxAmplitude = Math.round(Math.random() * (200 - 10) + 10);
+    maxThickness = Math.round(Math.random() * 50 + 50);
+    maxAmplitude = Math.round(Math.random() * 50 + 50);
     baseHue = Math.round(Math.random() * 360);
     randomStep = Math.random() > 0.5;
     resetAngle = Math.random() > 0.5;
