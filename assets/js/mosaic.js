@@ -1,8 +1,8 @@
 /**
-         * Create a mosaic of a given p5.js sketch.
-         * Created using ChatGPT-3.5-turbo:
-         * https://chat.openai.com/share/a88e18c4-7a2f-467f-9933-53df1d5faf3e
-         */
+ * Create a mosaic of a given p5.js sketch.
+ * Created using ChatGPT-3.5-turbo:
+ * https://chat.openai.com/share/a88e18c4-7a2f-467f-9933-53df1d5faf3e
+ */
 // Function to create iframes and load the sketch from a file
 function createIframe(url, size) {
     let iframe = document.createElement('iframe');
@@ -33,7 +33,7 @@ function isBottomOfPage() {
 
 const scriptUrl = '../index.html';
 
-// Create a 4 by 4 grid of iframes initially
+// Create a 2 column grid of iframes that takes up the whole screen
 const cols = 2;
 const size = Math.floor((window.innerWidth - getScrollBarWidth()) / cols);
 const rows = Math.ceil(window.innerHeight / size);
