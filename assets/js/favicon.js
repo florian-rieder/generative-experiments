@@ -32,8 +32,6 @@ function drawRandomPattern() {
     let numShapes = floor(random(5, 15));
 
     for (let i = 0; i < numShapes; i++) {
-
-
         // Set random size
         let size = random(2, width / 2);
 
