@@ -22,6 +22,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
             entry.target.classList.add("active");
             let allChildren = entry.target.getElementsByTagName("*");
             for (child of allChildren) {
+                if (child.classList.contains("spinner")) continue;
                 child.classList.add("active");
             }
 
