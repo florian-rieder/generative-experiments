@@ -1,6 +1,8 @@
 # Experiments in Generative Art
 Artworks made during the Generative Art course given by Isaac Pante at UNIL during the spring semester 2023.
 
+<img src="https://github.com/florian-rieder/generative-experiments/assets/48287183/02b89c07-0b79-4d84-bf32-432409a4a049" width=100%>
+
 [Visit the website](https://florian-rieder.github.io/generative-experiments/)
 
 ## Series
