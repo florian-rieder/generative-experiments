@@ -9,6 +9,7 @@
 """
 
 import time
+import traceback
 import json
 
 from watchdog.observers import Observer
@@ -71,7 +72,11 @@ class FileChangeHandler(FileSystemEventHandler):
     def on_modified(self, event):
         if event.src_path.endswith('base.html') or event.src_path.endswith('data.json'):
             print("HTML or JSON file modified. Compiling and saving...")
-            compile()
+            try:
+                compile()
+            except Exception:
+                traceback.print_exc()
+                print('Compilation aborted.')
 
 
 if __name__ == "__main__":

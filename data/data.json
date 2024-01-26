@@ -3,7 +3,7 @@
         "title": "Schotter",
         "serie": "Hommage à Georg Nees",
         "number": "1.1",
-        "description": "Schotter est une des oeuvres les plus connues de Georg Nees, artiste allemand pionnier de l'art génératif dans les années 60. L'oeuvre est composée d'une grille de carrés, de plus en plus dérangés.<br>Cliquer pour regénérer.",
+        "description": "<i>Schotter</i> est une des oeuvres les plus connues de Georg Nees, artiste allemand pionnier de l'art génératif dans les années 60. L'oeuvre est composée d'une grille de carrés, de plus en plus dérangés, jouant sur la relation entre ordre et chaos.<br>Cliquer pour regénérer.",
         "slug": "schotter",
         "original": "http://dada.compart-bremen.de/item/artwork/1"
     },
@@ -11,7 +11,7 @@
         "title": "Untitled (Werkstatt Edition Kroll)",
         "serie": "Hommage à Georg Nees",
         "number": "1.2",
-        "description": "Cette oeuvre consiste en une grille dans laquelle un nombre croissant de points sont tirés sur un cercle, puis reliés aléatoirement, mélangeant ordre et chaos.<br>Cliquer pour regénérer.",
+        "description": "Cette oeuvre est formée d'une grille dans laquelle chaque cellule consiste d'un nombre croissant de points qui sont tirés sur un cercle, puis reliés aléatoirement. Pour chaque cellule, on a donc un symbole de plus en plus complexe et chaotique. <br>Cliquer pour regénérer.",
         "slug": "werkstatt",
         "original": "https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/"
     },
@@ -19,7 +19,7 @@
         "title": "Untitled (Bild 13)",
         "serie": "Hommage à Georg Nees",
         "number": "1.3",
-        "description": "Deux ensembles de cercles qui se rejoignent en un point tangent.<br>Cliquer pour regénérer.",
+        "description": "Cette oeuvre consiste de deux ensembles d'arcs de cercle qui se rejoignent en un point tangent.<br>Cliquer pour regénérer.",
         "slug": "bild13",
         "original": "http://dada.compart-bremen.de/item/artwork/1456"
     },
@@ -27,7 +27,7 @@
         "title": "Motherboard",
         "serie": "Géométries simples",
         "number": "2.1",
-        "description": "Exercice en \"rectangle packing\" dans une grille modulaire, qui rappelle un peu Mondrian. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
+        "description": "Exercice en \"rectangle packing\" dans une grille modulaire. L'algorithme fonctionne en cherchant d'abord le plus grand rectangle vide disponible dans la grille, puis remplit un rectangle aléatoire borné à ce rectangle maximal, alors que certains sont laissés vides. Cet algorithme, visualisé par l'animation des ajouts successifs de rectangles, rappelle le processus automatique de manufacture de circuits imprimés.",
         "slug": "motherboard"
     },
     {

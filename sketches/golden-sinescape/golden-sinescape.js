@@ -1,4 +1,3 @@
-const PHI = (1 + Math.sqrt(5)) / 2; // golden ratio
 const padding = 50;
 let freq; 
 
@@ -15,7 +14,7 @@ function initialize() {
     currentY = -padding;
     angle = 0;
     increment = padding;
-    freq = (random(2, 10) * 2) + 1; // odd numbers produce more interesting results.
+    freq = (random(2, 10) * 2) + 1; // Odd numbers produce more interesting results.
     let numWeights = round(random(2, 6));
     let weights = generateWeights(numWeights);
     sineFunc = (t) => harmonicSine(t, weights);
@@ -24,21 +23,23 @@ function initialize() {
 }
 
 function drawSinescape(sineFunc) {
-    // Don't worry ! There's a return statement in there, and it's entirely deterministic
     const angleIncrement = (PI * freq) / (height + 2 * padding)
-    while (true) {
-        // calculate the X based on the current X, angle and current Y
-        const x = currentX + sineFunc(angle) * (increment + currentY + padding);
-        goldenRect(x, currentY, padding);
 
-        // increment angle and current Y
+    // Don't worry ! There's a return statement in there, and it's entirely deterministic
+    while (true) {
+        // Calculate the X based on the current X, angle and current Y
+        const x = currentX + sineFunc(angle) * (increment + currentY + padding);
+        landscapeRect(x, currentY, padding);
+
+        // Increment angle and current Y
         angle += angleIncrement;
         currentY++;
 
-        // stop the simulation once we have reached the bottom right corner, basically
+        // Stop the simulation once we have reached the bottom right
+        // corner, basically
         if (currentX > width && currentY > height + padding) return;
 
-        // when we arrive at the bottom of the window,
+        // When we arrive at the bottom of the window,
         // get back to the top and move to the right
         if (currentY > height + padding) {
             currentX += currentX / 2;
@@ -47,9 +48,11 @@ function drawSinescape(sineFunc) {
     }
 }
 
-function goldenRect(x, y, rectWidth) {
-    let rectHeight = rectWidth * PHI
-    rect(x, y, x + rectWidth, y + rectHeight);
+function landscapeRect(x, y, rectWidth) {
+    // Create a rect whose width depends on its x position, and
+    // its height is the height of the canvas so as to cover everything
+    // beneath its y position until the bottom border of the canvas
+    rect(x, y, x + rectWidth, height);
 }
 
 function harmonicSine(t, weights) {
