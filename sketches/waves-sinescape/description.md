@@ -1,0 +1,1 @@
+Cette oeuvre se déploie au travers d'une toile infinie de lignes sinueuses, évoquant une topographie imaginaire en perpétuelle évolution. Les oscillations sont le résultat d'un jeu subtile entre des composantes harmoniques sinusoïdales générées aléatoirement et du bruit de Perlin.
