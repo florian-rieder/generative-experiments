@@ -18,12 +18,11 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Path where the metadata about the list of artworks can be found
-DATA_PATH = 'data/data.json'
+DATA_PATH = 'assets/data/data.json'
 
-
-# Folders to monitor for changes
+# Files to monitor for changes
 MONITORED_FILES = [
-    '/data/data.json',
+    '/assets/data/data.json',
     '/assets/html/base.html',
     '/sketches/*.md'
 ]
