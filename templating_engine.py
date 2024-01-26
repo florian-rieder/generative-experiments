@@ -27,6 +27,8 @@ MONITORED_DIRS = [
     '/sketches/'
 ]
 
+CWD = os.getcwd()
+
 # Create a Jinja2 environment
 env = Environment(loader=FileSystemLoader('templates'))
 
@@ -96,7 +98,7 @@ def convert_markdown_to_html(markdown_file):
         markdown_content = file.read()
 
     # Use markdown2 library for conversion
-    html_content = markdown2.markdown(markdown_content)
+    html_content = markdown2.markdown(markdown_content).strip()
     return html_content
 
 
@@ -104,9 +106,11 @@ class FileChangeHandler(FileSystemEventHandler):
     """Watchdog event handler"""
 
     def on_modified(self, event):
-        if any(event.src_path.startswith(os.getcwd()+x) for x in MONITORED_DIRS):
+        path = event.src_path
+        if any(path.startswith(CWD+x) for x in MONITORED_DIRS):
+            relative_path = os.path.relpath(path, CWD)
             print(
-                f'File changed: {event.src_path}\n'
+                f'File changed: {relative_path}\n'
                 'Compiling and saving...')
             try:
                 compile()

@@ -19,9 +19,9 @@ In this serie, I used trigonometric functions, mainly sines, to generate various
 In some of the artworks, I also make use of Perlin noise to add touches of organic chaos.
 
 
-## Website
-### Design Concept: Swiss Design Meets Digital Media
-The inspiration behind this website draws from the timeless principles of Swiss design, offering a refined and understated canvas reminiscent of the "white cube" often found in museography—a term denoting a neutral and unobtrusive gallery space. Purposefully selecting this minimalistic backdrop serves to highlight the vivid and geometric generative artworks within a neutral environment, directing focus solely on the artistry. The goal here is to seamlessly blend the classic sophistication of Swiss design with the lively expressiveness inherent in generative art and web design, resulting in an enticing and contemporary online gallery experience.
+## Online Gallery
+### Design Concept: Swiss Design Meets Generative Media
+The inspiration behind this online gallery draws from the timeless principles of Swiss design — also known as the International Typographic Style — offering a refined and understated canvas reminiscent of the "white cube" often found in museography — a term denoting a neutral and unobtrusive gallery space. Purposefully selecting this minimalistic backdrop serves to highlight the vivid and geometric generative artworks within a neutral environment, directing focus solely on the art. The goal here is to seamlessly blend the classic sophistication of Swiss design with the lively expressiveness inherent in generative art and web design, resulting in an enticing and contemporary online gallery experience.
 
 ### Libraries
 This site uses the `p5.js` library to generate artworks. The styling uses SCSS and the layout uses [Pure CSS](https://purecss.io/).
