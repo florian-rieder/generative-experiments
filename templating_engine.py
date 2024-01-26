@@ -1,11 +1,10 @@
 """
-    Static site generator
-    ---------------------
-    Renders index.html upon modifications to either templates or data
-    files.
+Static site generator
+---------------------
+Renders index.html upon modifications to either templates or data files.
 
-    This file was built using GPT 3.5:
-    https://chat.openai.com/share/7db97f52-17e8-44a1-ad75-ec364a2c9915
+This file was bootstrapped using GPT 3.5:
+https://chat.openai.com/share/7db97f52-17e8-44a1-ad75-ec364a2c9915
 """
 import time
 import json
@@ -20,6 +19,9 @@ from watchdog.events import FileSystemEventHandler
 # Path where the metadata about the list of artworks can be found
 DATA_PATH = 'assets/data/data.json'
 
+# Path to the HTML jinja2 templates
+TEMPLATES_PATH = 'assets/html'
+
 # Files to monitor for changes
 MONITORED_FILES = [
     '/assets/data/data.json',
@@ -27,10 +29,11 @@ MONITORED_FILES = [
     '/sketches/*.md'
 ]
 
+# Current Working Directory
 CWD = os.getcwd()
 
 # Create a Jinja2 environment
-env = Environment(loader=FileSystemLoader('assets/html'))
+env = Environment(loader=FileSystemLoader(TEMPLATES_PATH))
 
 
 def main():
@@ -40,7 +43,7 @@ def main():
     observer.start()
 
     # Compile once on startup
-    print('Startup compile...')
+    print('Startup compile...', end=' ')
     compile()
 
     try:
@@ -53,9 +56,9 @@ def main():
 
 
 def compile():
-    data = load_data_from_json(DATA_PATH)
+    data = load_artworks_metadata_from_json(DATA_PATH)
     render_and_save(data)
-    print("Files compiled.")
+    print("compiled.")
 
 
 def render_and_save(data):
@@ -82,11 +85,15 @@ def render_and_save(data):
         f.write(rendered_html)
 
 
-def load_data_from_json(json_file):
+def load_artworks_metadata_from_json(json_file):
     """Load data from JSON file"""
     with open(json_file, 'r') as f:
         data = json.load(f)
-    return data
+
+    metadata = data["meta"]
+    artworks_metadata = data["data"]
+
+    return artworks_metadata
 
 
 def convert_markdown_to_html(markdown_file):
@@ -118,6 +125,7 @@ def is_monitored(file: str) -> bool:
 
     return False
 
+
 class FileChangeHandler(FileSystemEventHandler):
     """Watchdog event handler"""
 
@@ -125,9 +133,7 @@ class FileChangeHandler(FileSystemEventHandler):
         path = event.src_path
         if is_monitored(path):
             relative_path = os.path.relpath(path, CWD)
-            print(
-                f'File changed: {relative_path}\n'
-                'Compiling and saving...')
+            print(f'File changed: {relative_path}', end=' ')
             try:
                 compile()
             except Exception:

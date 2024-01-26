@@ -1,66 +1,72 @@
-[
-    {
-        "title": "Schotter",
-        "serie": "Hommage à Georg Nees",
-        "number": "1.1",
-        "slug": "schotter",
-        "original": "http://dada.compart-bremen.de/item/artwork/1"
+{
+    "meta": {
+        "author": "Florian Rieder",
+        "description": "The list of metadata about the artworks presented in this project"
     },
-    {
-        "title": "Untitled (Werkstatt Edition Kroll)",
-        "serie": "Hommage à Georg Nees",
-        "number": "1.2",
-        "slug": "werkstatt",
-        "original": "https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/"
-    },
-    {
-        "title": "Untitled (Bild 13)",
-        "serie": "Hommage à Georg Nees",
-        "number": "1.3",
-        "slug": "bild13",
-        "original": "http://dada.compart-bremen.de/item/artwork/1456"
-    },
-    {
-        "title": "Motherboard",
-        "serie": "Géométries simples",
-        "number": "2.1",
-        "slug": "motherboard"
-    },
-    {
-        "title": "Moiré",
-        "serie": "Géométries simples",
-        "number": "2.2",
-        "slug": "moire"
-    },
-    {
-        "title": "Lignes",
-        "serie": "Géométries simples",
-        "number": "2.3",
-        "slug": "lignes"
-    },
-    {
-        "title": "Waves Sinescape",
-        "serie": "Sinescapes",
-        "number": "3.1",
-        "slug": "waves-sinescape"
-    },
-    {
-        "title": "Golden Sinescape",
-        "serie": "Sinescapes",
-        "number": "3.2",
-        "slug": "golden-sinescape"
-    },
-    {
-        "title": "Générateur de filaments",
-        "serie": "Sinescapes",
-        "number": "3.3",
-        "slug": "filaments-generator",
-        "mosaic": true
-    },
-    {
-        "title": "Filaments",
-        "serie": "Sinescapes",
-        "number": "3.3b",
-        "slug": "filaments"
-    }
-]
+    "data": [
+        {
+            "title": "Schotter",
+            "serie": "Hommage à Georg Nees",
+            "number": "1.1",
+            "slug": "schotter",
+            "original": "http://dada.compart-bremen.de/item/artwork/1"
+        },
+        {
+            "title": "Untitled (Werkstatt Edition Kroll)",
+            "serie": "Hommage à Georg Nees",
+            "number": "1.2",
+            "slug": "werkstatt",
+            "original": "https://collections.vam.ac.uk/item/O1347720/werkstatt-edition-kroll-print-georg-nees/"
+        },
+        {
+            "title": "Untitled (Bild 13)",
+            "serie": "Hommage à Georg Nees",
+            "number": "1.3",
+            "slug": "bild13",
+            "original": "http://dada.compart-bremen.de/item/artwork/1456"
+        },
+        {
+            "title": "Motherboard",
+            "serie": "Géométries simples",
+            "number": "2.1",
+            "slug": "motherboard"
+        },
+        {
+            "title": "Moiré",
+            "serie": "Géométries simples",
+            "number": "2.2",
+            "slug": "moire"
+        },
+        {
+            "title": "Lignes",
+            "serie": "Géométries simples",
+            "number": "2.3",
+            "slug": "lignes"
+        },
+        {
+            "title": "Waves Sinescape",
+            "serie": "Sinescapes",
+            "number": "3.1",
+            "slug": "waves-sinescape"
+        },
+        {
+            "title": "Golden Sinescape",
+            "serie": "Sinescapes",
+            "number": "3.2",
+            "slug": "golden-sinescape"
+        },
+        {
+            "title": "Générateur de filaments",
+            "serie": "Sinescapes",
+            "number": "3.3",
+            "slug": "filaments-generator",
+            "mosaic": true
+        },
+        {
+            "title": "Filaments",
+            "serie": "Sinescapes",
+            "number": "3.3b",
+            "slug": "filaments"
+        }
+    ]
+}
