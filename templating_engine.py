@@ -20,17 +20,18 @@ from watchdog.events import FileSystemEventHandler
 # Path where the metadata about the list of artworks can be found
 DATA_PATH = 'data/data.json'
 
+
 # Folders to monitor for changes
-MONITORED_DIRS = [
-    '/data/',
-    '/templates/',
-    '/sketches/'
+MONITORED_FILES = [
+    '/data/data.json',
+    '/assets/html/base.html',
+    '/sketches/*.md'
 ]
 
 CWD = os.getcwd()
 
 # Create a Jinja2 environment
-env = Environment(loader=FileSystemLoader('templates'))
+env = Environment(loader=FileSystemLoader('assets/html'))
 
 
 def main():
@@ -102,12 +103,28 @@ def convert_markdown_to_html(markdown_file):
     return html_content
 
 
+def is_monitored(file: str) -> bool:
+    """Check that a file needs to be monitored for changes"""
+    for pattern in MONITORED_FILES:
+        try:
+            start, end = pattern.split('*')
+        except ValueError:
+            if file.endswith(pattern):
+                return True
+            else:
+                continue
+
+        if file.startswith(CWD+start) and file.endswith(end):
+            return True
+
+    return False
+
 class FileChangeHandler(FileSystemEventHandler):
     """Watchdog event handler"""
 
     def on_modified(self, event):
         path = event.src_path
-        if any(path.startswith(CWD+x) for x in MONITORED_DIRS):
+        if is_monitored(path):
             relative_path = os.path.relpath(path, CWD)
             print(
                 f'File changed: {relative_path}\n'
