@@ -1,14 +1,16 @@
 const angleIncrement = 0.01;
-const noiseIncrement = 0.01;
-const amplitude = 100;
-const noiseAmplitude = 50;
-const step = 20;
-const hStep = 2;
+const noiseIncrement = 0.006;
+const amplitude = 150;
+const noiseAmplitude = 100;
+const stepBetweenLines = 10;
+const stepBetweenPoints = 4;
 const numWeights = 3;
-let speed = 1;
+const speed = 0.001;
+const maxAmplitude = amplitude * 2 + noiseAmplitude * 2;
 
-let weights;
-let noiseCache; // Cache for precomputed noise values
+
+let weights, noiseCache; // Cache for precomputed noise values
+let t = 0;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -17,32 +19,33 @@ function setup() {
     noFill();
     frameRate(60);
 
-    currentTime = 0;
-
     weights = generateWeights(numWeights);
-    computeNoise();
+    noiseCache = computeNoise();
 }
 
 function draw() {
     background(0);
-    angle = currentTime;
-    currentTime += deltaTime;
+    angle = t;
+    t += speed * deltaTime;
     drawSinescape();
 }
 
 function drawSinescape() {
-    for (let y = -step; y < height + step; y += step) {
-        drawLine(y);
-        angle = y * angleIncrement + currentTime / 250;
+    let i = 0;
+    for (let y = -maxAmplitude; y <= height + maxAmplitude; y += stepBetweenLines) {
+        drawLine(i, y);
+        angle = y * angleIncrement + t;
+        i++;
     }
 }
 
-function drawLine(offsetY) {
+function drawLine(i, baseY) {
     beginShape();
-    for (let x = -hStep; x < width; x += hStep) {
-        const harmonicComponent = harmonicSine(angle, weights) * amplitude;
-        const noiseComponent = noiseCache[(x + (width * (offsetY / 10))) % noiseCache.length] * noiseAmplitude;
-        let y = harmonicComponent + noiseComponent + offsetY;
+    let y, harmonicComponent, noiseComponent;
+    for (let x = 0; x <= width + stepBetweenPoints; x += stepBetweenPoints) {
+        noiseComponent = noiseCache[i][x] * noiseAmplitude;
+        harmonicComponent = harmonicSine(angle, weights) * amplitude;
+        y = baseY + harmonicComponent + noiseComponent;
         angle += angleIncrement;
         vertex(x, y);
     }
@@ -59,16 +62,18 @@ function harmonicSine(t, weights) {
 
 function computeNoise() {
     // Pre-compute noise values and store them in the cache
-    noiseCache = [];
-    let noiseOffset = createVector(0, 0);
-    for (let y = 0; y < height; y += step) {
-        for (let x = 0; x < width; x++) {
-            noiseCache.push(noise(noiseOffset.x, noiseOffset.y));
-            noiseOffset.x += noiseIncrement;
+    let cache = [];
+    let offset = createVector(0, 0);
+    for (let y = 0; y <= (height+maxAmplitude*2)/stepBetweenLines; y++) {
+        cache.push([])
+        for (let x = 0; x <= width + stepBetweenPoints; x++) {
+            cache[y].push(noise(offset.x, offset.y));
+            offset.x += noiseIncrement;
         }
-        noiseOffset.y += noiseIncrement * 10;
-        noiseOffset.x = 0;
+        offset.y += noiseIncrement * stepBetweenLines;
+        offset.x = 0;
     }
+    return cache;
 }
 
 /* Prompt: *My naive implementation* The current implementation of the generateWeights doesn't really satisfy me.

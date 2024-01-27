@@ -70,23 +70,17 @@
   display: flex;
   justify-content: space-between;
 }
-.slide-details h3 {
+.slide-details h3.slide-series {
   margin: 0;
   color: rgb(73, 73, 73);
   font-weight: 400;
   transform: translate(0, 100px);
   transition-duration: 0.5s;
 }
-.slide-details p {
+.slide-details div.slide-description {
   transform: translate(0, 100px);
   transition-duration: 0.55s;
   opacity: 0;
-}
-.slide-details br {
-  content: "";
-  margin: 2em;
-  display: block;
-  font-size: 24%;
 }
 .slide-details .slide-links {
   transform: translate(0, 100px);
