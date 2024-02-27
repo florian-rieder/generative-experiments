@@ -1,3 +1,3 @@
-Cette oeuvre est formée d'une grille dans laquelle chaque cellule consiste d'un nombre croissant de points qui sont tirés sur un cercle, puis reliés aléatoirement. Pour chaque cellule, on a donc un symbole de plus en plus complexe et chaotique.
+Cette fidèle reproduction de *Untitled (Werkstatt Edition Kroll)* (1970) capture la force esthétique de cette œuvre emblématique de l'art informatique. Chaque cellule de la grille est remplie avec une forme constituée d'un nombre croissant de points placés aléatoirement dans un cercle, créant ainsi des symboles complexes, à la fois chaotiques et ordonnés.
 
 Cliquer pour regénérer.
