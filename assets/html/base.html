@@ -43,6 +43,7 @@
 
         {%- for item in item_list %}
         <div class="scroll-section pure-g">
+            <a class="section-anchor" id="{{item.slug}}"></a>
             <div class="canvas-container pure-u-sm-1-2">
                 <div class="spinner"></div>
                 <iframe data-src="sketches/{{item.slug}}/index.html" title="{{item.title}}" loading="lazy"

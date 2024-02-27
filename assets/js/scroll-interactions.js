@@ -9,11 +9,25 @@ const observerOptions = {
 // Fade scroll sections in when scrolled into
 const sections = document.querySelectorAll(".scroll-section");
 
-const sectionObserver = new IntersectionObserver((entries, observer) => {
+const sectionObserver = new IntersectionObserver((entries, _observer) => {
     entries.forEach(entry => {
-        if (entry.target.id == "hero") return; // ignore main header
+        // Update URL to this section's anchor
+        if (entry.isIntersecting && window.history.pushState) {
+            const anchor = entry.target.querySelector('a.section-anchor');
+            let url = window.location.origin + window.location.pathname
+            // Add the anchor, if there is one (there isn't one for the
+            // hero. When scrolling to the hero, the url goes back to root)
+            if (anchor) {
+                const id = anchor.id
+                url += '#' + id
+            }
+            window.history.pushState({}, '', url);
+        }
 
-        let iframe = entry.target.querySelector("iframe[data-src]");
+        // Ignore main header for the rest of the effects
+        if (entry.target.id == "hero") return;
+
+        const iframe = entry.target.querySelector("iframe[data-src]");
         const iframeWindow = iframe.contentWindow;
         const spinner = entry.target.querySelector(".spinner");
 

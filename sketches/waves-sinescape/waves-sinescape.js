@@ -35,9 +35,10 @@ function drawSinescape() {
     // Prevents crash when resizing window to a larger height
     // The noiseCache update doesn't happen soon enough and causes a
     // "noiseCache[i] is undefined" error in drawLine
-    if (noiseCache.length < (height + maxAmplitude*2)/stepBetweenLines){
+    if (noiseCache.length < (height + maxAmplitude * 2) / stepBetweenLines) {
         return;
     }
+
     for (let y = -maxAmplitude; y <= height + maxAmplitude; y += stepBetweenLines) {
         drawLine(i, y);
         angle = y * angleIncrement + t;
@@ -47,16 +48,14 @@ function drawSinescape() {
 
 function drawLine(i, baseY) {
     beginShape();
-    vertex(0, height);
     let y, harmonicComponent, noiseComponent;
     for (let x = 0; x <= width + stepBetweenPoints; x += stepBetweenPoints) {
         noiseComponent = noiseCache[i][x] * noiseAmplitude;
         harmonicComponent = harmonicSine(angle, weights) * amplitude;
         y = baseY + harmonicComponent + noiseComponent;
         angle += angleIncrement;
-        vertex(x, y);  
+        vertex(x, y);
     }
-    vertex(width, height);
     endShape();
 }
 
@@ -73,7 +72,7 @@ function computeNoise() {
     let cache = [];
     let offset = createVector(0, 0);
     let i = 0;
-    for (let y = -maxAmplitude; y <= windowHeight+maxAmplitude; y += stepBetweenLines) {
+    for (let y = -maxAmplitude; y <= windowHeight + maxAmplitude; y += stepBetweenLines) {
         cache.push([])
         for (let x = 0; x <= windowWidth + stepBetweenPoints; x++) {
             cache[i].push(noise(offset.x, offset.y));
