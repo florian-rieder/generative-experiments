@@ -2,8 +2,8 @@ const angleIncrement = 0.01;
 const noiseIncrement = 0.006;
 const amplitude = 150;
 const noiseAmplitude = 100;
-const stepBetweenLines = 10;
-const stepBetweenPoints = 4;
+const stepBetweenLines = 12;
+const stepBetweenPoints = 6;
 const numWeights = 3;
 const speed = 0.001;
 const maxAmplitude = amplitude * 2 + noiseAmplitude * 2;
@@ -32,6 +32,12 @@ function draw() {
 
 function drawSinescape() {
     let i = 0;
+    // Prevents crash when resizing window to a larger height
+    // The noiseCache update doesn't happen soon enough and causes a
+    // "noiseCache[i] is undefined" error in drawLine
+    if (noiseCache.length < (height + maxAmplitude*2)/stepBetweenLines){
+        return;
+    }
     for (let y = -maxAmplitude; y <= height + maxAmplitude; y += stepBetweenLines) {
         drawLine(i, y);
         angle = y * angleIncrement + t;
@@ -41,14 +47,16 @@ function drawSinescape() {
 
 function drawLine(i, baseY) {
     beginShape();
+    vertex(0, height);
     let y, harmonicComponent, noiseComponent;
     for (let x = 0; x <= width + stepBetweenPoints; x += stepBetweenPoints) {
         noiseComponent = noiseCache[i][x] * noiseAmplitude;
         harmonicComponent = harmonicSine(angle, weights) * amplitude;
         y = baseY + harmonicComponent + noiseComponent;
         angle += angleIncrement;
-        vertex(x, y);
+        vertex(x, y);  
     }
+    vertex(width, height);
     endShape();
 }
 
@@ -64,14 +72,16 @@ function computeNoise() {
     // Pre-compute noise values and store them in the cache
     let cache = [];
     let offset = createVector(0, 0);
-    for (let y = 0; y <= (height+maxAmplitude*2)/stepBetweenLines; y++) {
+    let i = 0;
+    for (let y = -maxAmplitude; y <= windowHeight+maxAmplitude; y += stepBetweenLines) {
         cache.push([])
-        for (let x = 0; x <= width + stepBetweenPoints; x++) {
-            cache[y].push(noise(offset.x, offset.y));
+        for (let x = 0; x <= windowWidth + stepBetweenPoints; x++) {
+            cache[i].push(noise(offset.x, offset.y));
             offset.x += noiseIncrement;
         }
         offset.y += noiseIncrement * stepBetweenLines;
         offset.x = 0;
+        i++;
     }
     return cache;
 }
@@ -102,7 +112,8 @@ function generateWeights(numWeights) {
 }
 
 function windowResized() {
+    noLoop();
     resizeCanvas(windowWidth, windowHeight);
-    computeNoise();
-
+    noiseCache = computeNoise();
+    loop();
 }
