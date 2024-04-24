@@ -38,6 +38,16 @@ For a smoother development workflow, it's recommended to use [Visual Studio Code
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): This extension enables live reloading of your web page when changes are made, making development more efficient.
 - [Live SASS compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass): This extension compiles SCSS files in real-time, simplifying the management of the styles.
 
+In order to properly render SCSS to the correct path:
+Go to VScode User Settings > Select "Live Sass Compiler Config > add
+```json
+"liveSassCompile.settings.formats": [{
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "./assets/css"
+    }]
+```
+
 ### Python Environment Setup
 To set up the Python environment, follow these steps:
 

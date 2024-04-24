@@ -1,7 +1,7 @@
 {
     "meta": {
         "author": "Florian Rieder",
-        "description": "The list of metadata about the artworks presented in this project"
+        "description": "The list of metadata about the artworks presented in this project, used to generate the final index.html"
     },
     "data": [
         {
